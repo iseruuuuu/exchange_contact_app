@@ -24,12 +24,7 @@ class _HomeState extends State<Home> {
         ),
         leading: IconButton(
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => SettingScreen(),
-              ),
-            );
+
           },
           icon: Icon(Icons.settings),
         ),
