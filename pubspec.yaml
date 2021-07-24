@@ -51,7 +51,7 @@ dev_dependencies:
   build_runner:
   flutter_state_notifier:
   shared_preferences:
-
+  enum_to_string:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
