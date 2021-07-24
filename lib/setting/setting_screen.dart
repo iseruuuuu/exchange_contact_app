@@ -12,13 +12,31 @@ class SettingScreen extends StatelessWidget {
       create: (context) => SettingScreenController(context: context),
       builder: (context, _) {
         return Scaffold(
+          appBar: AppBar(
+            title: Text('設定'),
+            actions: [
+              TextButton(
+                onPressed: () {},
+                child: Text('保存'),
+              ),
+            ],
+          ),
           body: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                Center(child: Text('LINEを登録'),),
+                Center(
+                  child: const Text(
+                    'LINEを登録',
+                  ),
+                ),
+                TextField(),
+
                 Text('Twiterを登録'),
+                TextField(),
                 Text('Instagramを登録'),
+                TextField(),
                 Text('FaceBookを登録'),
+                TextField(),
               ],
             ),
           ),
