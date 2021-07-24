@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:state_notifier/state_notifier.dart';
+import 'package:exchange_contact_app/setting/setting_screen.dart';
 
 part 'home_screen_state.freezed.dart';
 
@@ -14,13 +16,18 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
 
   final BuildContext context;
 
-
+  @override
   void initState() {
-    //TODO データの取得
+    super.initState();
   }
 
-  void onTapStore() {
-    //TODO データの保存
+  void onTapSetting() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const SettingScreen(),
+      ),
+    );
   }
 
 }
