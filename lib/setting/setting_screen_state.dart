@@ -10,6 +10,17 @@ abstract class SettingScreenState with _$SettingScreenState {
 
 }
 class SettingScreenController extends StateNotifier<SettingScreenState> with LocatorMixin {
-SettingScreenController({required this.context}) : super (const SettingScreenState());
-final BuildContext context;
+  SettingScreenController({required this.context}) : super (const SettingScreenState());
+
+  final BuildContext context;
+
+
+  void initState() {
+    //TODO データの取得
+  }
+
+  void onTapStore() {
+    //TODO データの保存
+  }
+
 }

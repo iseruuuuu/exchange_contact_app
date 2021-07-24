@@ -1,6 +1,6 @@
 import 'package:exchange_contact_app/setting/setting_screen.dart';
 import 'package:flutter/material.dart';
-import 'component/cell_item.dart';
+import '../component/cell_item.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
