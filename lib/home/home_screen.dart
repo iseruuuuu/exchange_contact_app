@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../component/cell_item.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'home_screen_state.dart';
+import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -27,10 +28,8 @@ class _HomeState extends State<Home> {
               ),
             ),
             leading: IconButton(
-              onPressed: () {
-
-              },
-              icon: Icon(Icons.settings),
+              onPressed: () => context.read<HomeScreenController>().onTapSetting(),
+              icon: const Icon(Icons.settings),
             ),
           ),
           body: Container(
