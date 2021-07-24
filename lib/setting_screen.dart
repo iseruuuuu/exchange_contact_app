@@ -9,22 +9,10 @@ class SettingScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              height: 200,
-              color: Colors.green,
-            ),
-            Container(
-              height: 200,
-              color: Colors.blue,
-            ),
-            Container(
-              height: 200,
-              color: Colors.red,
-            ),
-            Container(
-              height: 200,
-              color: Colors.yellow,
-            ),
+            Center(child: Text('LINEを登録'),),
+            Text('Twiterを登録'),
+            Text('Instagramを登録'),
+            Text('FaceBookを登録'),
           ],
         ),
       ),
