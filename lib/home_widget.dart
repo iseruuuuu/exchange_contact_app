@@ -10,112 +10,36 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final controller = TextEditingController();
-  final String number = 'point:';
-  int point = 0;
-  int getpoint = 1;
+  final String  = '';
+
 
   @override
-  Widget build(BuildContext context) =>
-      Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            '',
-            style: TextStyle(
-              fontSize: 20,
-            ),
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          '',
+          style: TextStyle(
+            fontSize: 20,
           ),
         ),
-        body: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.all(24),
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    color: Colors.white,
-                    padding: const EdgeInsets.all(20),
-                    child: BarcodeWidget(
-                      barcode: Barcode.code128(),
-                      data: 'int$point',
-                      width: 200,
-                      height: 200,
-                      drawText: false,
-                    ),
-                  ),
-                  const SizedBox(height: 40,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Spacer(),
-                      FlatButton(onPressed: () {
-                        setState(() {
-                          point -= 1;
-
-                        });
-                      }, child: Text('-',style: TextStyle(fontSize: 80),)),
-                      const Spacer(),
-                      Text('$point',style: TextStyle(fontSize: 50),),
-                      const Spacer(),
-                      FlatButton(onPressed: () {
-                        setState(() {
-                          point += 1;
-                        });
-                      }, child: Text('+',style: TextStyle(fontSize: 50),)),
-                      const Spacer(),
-                    ],
-                  ),
-
-                  const SizedBox(height: 40,),
-
-                  // FloatingActionButton(
-                  FlatButton(
-                    color: Colors.green,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: const Text(
-                      "リセット",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 25,
-                      ),
-                    ),
-                    onPressed: () => setState(() {
-                      point = 0;
-                    }),
-                  ),
-                ],
-              ),
-            ),
-          ),
+      ),
+      body: Container(
+        width: double.infinity,
+        child: GridView.count(
+          // Create a grid with 2 columns. If you change the scrollDirection to
+          // horizontal, this produces 2 rows.
+          crossAxisCount: 2,
+          // Generate 100 widgets that display their index in the List.
+          children: [
+            Text('1'),
+            Text('2'),
+            Text('3'),
+            Text('4'),
+          ]
         ),
-      );
-
-  Widget buildTextField(BuildContext context) =>
-      TextField(
-        keyboardType: TextInputType.number,
-        controller: controller,
-        style: const TextStyle(
-          color: Colors.grey,
-          fontWeight: FontWeight.bold,
-          fontSize: 20,
-        ),
-        decoration: InputDecoration(
-          hintText: '',
-          hintStyle: const TextStyle(color: Colors.grey),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16),
-            borderSide: const BorderSide(color: Colors.white),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(16),
-            borderSide: BorderSide(
-              color: Theme.of(context).primaryColor,
-            ),
-          ),
-        ),
-      );
+      ),
+    );
+  }
 }
