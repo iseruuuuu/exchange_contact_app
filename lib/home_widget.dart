@@ -1,3 +1,4 @@
+import 'package:exchange_contact_app/setting_screen.dart';
 import 'package:flutter/material.dart';
 import 'component/cell_item.dart';
 
@@ -20,6 +21,17 @@ class _HomeState extends State<Home> {
           style: TextStyle(
             fontSize: 20,
           ),
+        ),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => SettingScreen(),
+              ),
+            );
+          },
+          icon: Icon(Icons.settings),
         ),
       ),
       body: Container(
