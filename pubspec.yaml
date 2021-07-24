@@ -50,6 +50,7 @@ dev_dependencies:
   state_notifier:
   build_runner:
   flutter_state_notifier:
+  shared_preferences:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
