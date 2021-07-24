@@ -15,7 +15,6 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -33,13 +32,50 @@ class _HomeState extends State<Home> {
           crossAxisCount: 2,
           // Generate 100 widgets that display their index in the List.
           children: [
-            Text('1'),
-            Text('2'),
-            Text('3'),
-            Text('4'),
-          ]
+            CellWidget(name: 'LINE', color: Colors.green,),
+            CellWidget(name: 'Twiter',color: Colors.lightBlueAccent,),
+            CellWidget(name: 'Instagram',color: Colors.purple,),
+          ],
         ),
       ),
+    );
+  }
+}
+
+class CellWidget extends StatelessWidget {
+  const CellWidget({
+    Key? key,
+    required this.name,
+    required this.color,
+  }) : super(key: key);
+
+  final String name;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          name,
+          style: TextStyle(
+            fontSize: 30,
+            color: color,
+          ),
+        ),
+        Container(
+          color: Colors.white,
+          padding: const EdgeInsets.all(20),
+          child: BarcodeWidget(
+            barcode: Barcode.code128(),
+            //後で追加
+            data: 'int',
+            width: MediaQuery.of(context).size.width * 0.3,
+            height: 110,
+            drawText: false,
+          ),
+        ),
+      ],
     );
   }
 }
