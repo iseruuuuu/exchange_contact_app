@@ -32,9 +32,17 @@ class _HomeState extends State<Home> {
           crossAxisCount: 2,
           // Generate 100 widgets that display their index in the List.
           children: [
-            CellWidget(name: 'LINE', color: Colors.green,),
-            CellWidget(name: 'Twiter',color: Colors.lightBlueAccent,),
-            CellWidget(name: 'Instagram',color: Colors.purple,),
+            CellWidget(name: 'LINE',
+                color: Colors.green
+            ),
+            CellWidget(
+              name: 'Twiter',
+              color: Colors.lightBlueAccent,
+            ),
+            CellWidget(
+              name: 'Instagram',
+              color: Colors.purple,
+            ),
           ],
         ),
       ),
