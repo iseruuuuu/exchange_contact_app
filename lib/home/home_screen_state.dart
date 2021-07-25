@@ -31,33 +31,32 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
     super.initState();
 
     sharePreference.getString(PreferenceKey.LineID).then((lineID) {
-      if(lineID.isEmpty) return;
+      if (lineID.isEmpty) return;
       state = state.copyWith(
         LineID: lineID,
       );
     });
 
     sharePreference.getString(PreferenceKey.TwiterID).then((TwiterID) {
-      if(TwiterID.isEmpty) return;
+      if (TwiterID.isEmpty) return;
       state = state.copyWith(
         TwiterID: TwiterID,
       );
     });
 
     sharePreference.getString(PreferenceKey.InstagramID).then((InstagramID) {
-      if(InstagramID.isEmpty) return;
+      if (InstagramID.isEmpty) return;
       state = state.copyWith(
         InstagramID: InstagramID,
       );
     });
 
     sharePreference.getString(PreferenceKey.FaceBookID).then((FaceBookID) {
-      if(FaceBookID.isEmpty) return;
+      if (FaceBookID.isEmpty) return;
       state = state.copyWith(
         FaceBookID: FaceBookID,
       );
     });
-
   }
 
   void onTapSetting() {
