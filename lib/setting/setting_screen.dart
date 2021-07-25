@@ -42,15 +42,14 @@ class SettingScreen extends StatelessWidget {
               ),
             ),
           ),
-          body: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                KeybordItem(name: 'LINE',),
-                KeybordItem(name: 'Twiter',),
-                KeybordItem(name: 'Instagram',),
-                KeybordItem(name: 'Facebook',),
-              ],
-            ),
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              KeybordItem(name: 'LINE',color: Colors.green,),
+              KeybordItem(name: 'Twiter',color: Colors.lightBlueAccent,),
+              KeybordItem(name: 'Instagram',color: Colors.deepPurple,),
+              KeybordItem(name: 'Facebook',color: Colors.blue),
+            ],
           ),
         );
       },
