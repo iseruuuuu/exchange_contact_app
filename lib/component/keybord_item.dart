@@ -15,7 +15,7 @@ class KeybordItem extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(15.0),
           child: Text(
             name,
             style: TextStyle(
@@ -28,6 +28,11 @@ class KeybordItem extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: TextField(
+           // controller: _controller,
+            onChanged: (text) {
+              String name;
+              name = text;
+            },
             obscureText: true,
             decoration: InputDecoration(
               border: OutlineInputBorder(),
