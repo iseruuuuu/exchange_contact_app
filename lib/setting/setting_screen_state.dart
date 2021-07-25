@@ -22,6 +22,14 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
   void onTapStore() {
     //TODO データの保存
     print('保存したよ');
+    //TODO ラインのURLを保存
+
+    //TODO TwiterのURLを保存
+
+    //TODO instagramのURLを保存
+
+    //TODO FaceBookのURLを保存
+
     //TODO 前の画面に戻る
     Navigator.of(context).pop();
   }

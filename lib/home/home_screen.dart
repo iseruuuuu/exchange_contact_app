@@ -1,3 +1,4 @@
+import 'package:exchange_contact_app/component/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import '../component/cell_item.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
@@ -17,7 +18,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return StateNotifierProvider<HomeScreenController, HomeScreenState>(
-      create: (context) => HomeScreenController(context: context),
+      create: (context) => HomeScreenController(context: context, sharePreference: SharePreference()),
       builder: (context, _) {
         return Scaffold(
           appBar: AppBar(

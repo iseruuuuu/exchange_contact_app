@@ -5,7 +5,8 @@ enum PreferenceKey {
   //TODO　後で追加する。
   LineID,
   TwiterID,
-  InstagramID
+  InstagramID,
+  FaceBookID,
 }
 
 class SharePreference {
