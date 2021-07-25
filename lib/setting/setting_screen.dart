@@ -1,3 +1,4 @@
+import 'package:exchange_contact_app/component/keybord_item.dart';
 import 'package:exchange_contact_app/component/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
@@ -30,16 +31,13 @@ class SettingScreen extends StatelessWidget {
               ),
             ],
             //TODO　サイズの調整
-            leading: Padding(
-              padding: const EdgeInsets.only(left: 5),
-              child: TextButton(
-                onPressed: () => context.read<SettingScreenController>().onTapBack(),
-                child: const Text(
-                  '戻る',
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Colors.white,
-                  ),
+            leading: TextButton(
+              onPressed: () => context.read<SettingScreenController>().onTapBack(),
+              child: const Text(
+                '戻る',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -47,19 +45,10 @@ class SettingScreen extends StatelessWidget {
           body: SingleChildScrollView(
             child: Column(
               children: <Widget>[
-                Center(
-                  child: const Text(
-                    'LINEを登録',
-                  ),
-                ),
-                TextField(),
-
-                Text('Twiterを登録'),
-                TextField(),
-                Text('Instagramを登録'),
-                TextField(),
-                Text('FaceBookを登録'),
-                TextField(),
+                KeybordItem(name: 'LINE',),
+                KeybordItem(name: 'Twiter',),
+                KeybordItem(name: 'Instagram',),
+                KeybordItem(name: 'Facebook',),
               ],
             ),
           ),
