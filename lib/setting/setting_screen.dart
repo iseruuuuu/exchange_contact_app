@@ -1,3 +1,4 @@
+import 'package:exchange_contact_app/component/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'setting_screen_state.dart';
@@ -9,7 +10,7 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StateNotifierProvider<SettingScreenController, SettingScreenState>(
-      create: (context) => SettingScreenController(context: context),
+      create: (context) => SettingScreenController(context: context,sharePreference: SharePreference()),
       builder: (context, _) {
         return Scaffold(
           appBar: AppBar(

@@ -16,8 +16,17 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$SettingScreenStateTearOff {
   const _$SettingScreenStateTearOff();
 
-  _SettingScreenState call() {
-    return const _SettingScreenState();
+  _SettingScreenState call(
+      {String LineID = '',
+      String TwiterID = '',
+      String InstagramID = '',
+      String FaceBookID = ''}) {
+    return _SettingScreenState(
+      LineID: LineID,
+      TwiterID: TwiterID,
+      InstagramID: InstagramID,
+      FaceBookID: FaceBookID,
+    );
   }
 }
 
@@ -25,13 +34,24 @@ class _$SettingScreenStateTearOff {
 const $SettingScreenState = _$SettingScreenStateTearOff();
 
 /// @nodoc
-mixin _$SettingScreenState {}
+mixin _$SettingScreenState {
+  String get LineID => throw _privateConstructorUsedError;
+  String get TwiterID => throw _privateConstructorUsedError;
+  String get InstagramID => throw _privateConstructorUsedError;
+  String get FaceBookID => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $SettingScreenStateCopyWith<SettingScreenState> get copyWith =>
+      throw _privateConstructorUsedError;
+}
 
 /// @nodoc
 abstract class $SettingScreenStateCopyWith<$Res> {
   factory $SettingScreenStateCopyWith(
           SettingScreenState value, $Res Function(SettingScreenState) then) =
       _$SettingScreenStateCopyWithImpl<$Res>;
+  $Res call(
+      {String LineID, String TwiterID, String InstagramID, String FaceBookID});
 }
 
 /// @nodoc
@@ -42,13 +62,44 @@ class _$SettingScreenStateCopyWithImpl<$Res>
   final SettingScreenState _value;
   // ignore: unused_field
   final $Res Function(SettingScreenState) _then;
+
+  @override
+  $Res call({
+    Object? LineID = freezed,
+    Object? TwiterID = freezed,
+    Object? InstagramID = freezed,
+    Object? FaceBookID = freezed,
+  }) {
+    return _then(_value.copyWith(
+      LineID: LineID == freezed
+          ? _value.LineID
+          : LineID // ignore: cast_nullable_to_non_nullable
+              as String,
+      TwiterID: TwiterID == freezed
+          ? _value.TwiterID
+          : TwiterID // ignore: cast_nullable_to_non_nullable
+              as String,
+      InstagramID: InstagramID == freezed
+          ? _value.InstagramID
+          : InstagramID // ignore: cast_nullable_to_non_nullable
+              as String,
+      FaceBookID: FaceBookID == freezed
+          ? _value.FaceBookID
+          : FaceBookID // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
-abstract class _$SettingScreenStateCopyWith<$Res> {
+abstract class _$SettingScreenStateCopyWith<$Res>
+    implements $SettingScreenStateCopyWith<$Res> {
   factory _$SettingScreenStateCopyWith(
           _SettingScreenState value, $Res Function(_SettingScreenState) then) =
       __$SettingScreenStateCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String LineID, String TwiterID, String InstagramID, String FaceBookID});
 }
 
 /// @nodoc
@@ -61,27 +112,110 @@ class __$SettingScreenStateCopyWithImpl<$Res>
 
   @override
   _SettingScreenState get _value => super._value as _SettingScreenState;
+
+  @override
+  $Res call({
+    Object? LineID = freezed,
+    Object? TwiterID = freezed,
+    Object? InstagramID = freezed,
+    Object? FaceBookID = freezed,
+  }) {
+    return _then(_SettingScreenState(
+      LineID: LineID == freezed
+          ? _value.LineID
+          : LineID // ignore: cast_nullable_to_non_nullable
+              as String,
+      TwiterID: TwiterID == freezed
+          ? _value.TwiterID
+          : TwiterID // ignore: cast_nullable_to_non_nullable
+              as String,
+      InstagramID: InstagramID == freezed
+          ? _value.InstagramID
+          : InstagramID // ignore: cast_nullable_to_non_nullable
+              as String,
+      FaceBookID: FaceBookID == freezed
+          ? _value.FaceBookID
+          : FaceBookID // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_SettingScreenState implements _SettingScreenState {
-  const _$_SettingScreenState();
+  const _$_SettingScreenState(
+      {this.LineID = '',
+      this.TwiterID = '',
+      this.InstagramID = '',
+      this.FaceBookID = ''});
+
+  @JsonKey(defaultValue: '')
+  @override
+  final String LineID;
+  @JsonKey(defaultValue: '')
+  @override
+  final String TwiterID;
+  @JsonKey(defaultValue: '')
+  @override
+  final String InstagramID;
+  @JsonKey(defaultValue: '')
+  @override
+  final String FaceBookID;
 
   @override
   String toString() {
-    return 'SettingScreenState()';
+    return 'SettingScreenState(LineID: $LineID, TwiterID: $TwiterID, InstagramID: $InstagramID, FaceBookID: $FaceBookID)';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) || (other is _SettingScreenState);
+    return identical(this, other) ||
+        (other is _SettingScreenState &&
+            (identical(other.LineID, LineID) ||
+                const DeepCollectionEquality().equals(other.LineID, LineID)) &&
+            (identical(other.TwiterID, TwiterID) ||
+                const DeepCollectionEquality()
+                    .equals(other.TwiterID, TwiterID)) &&
+            (identical(other.InstagramID, InstagramID) ||
+                const DeepCollectionEquality()
+                    .equals(other.InstagramID, InstagramID)) &&
+            (identical(other.FaceBookID, FaceBookID) ||
+                const DeepCollectionEquality()
+                    .equals(other.FaceBookID, FaceBookID)));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(LineID) ^
+      const DeepCollectionEquality().hash(TwiterID) ^
+      const DeepCollectionEquality().hash(InstagramID) ^
+      const DeepCollectionEquality().hash(FaceBookID);
+
+  @JsonKey(ignore: true)
+  @override
+  _$SettingScreenStateCopyWith<_SettingScreenState> get copyWith =>
+      __$SettingScreenStateCopyWithImpl<_SettingScreenState>(this, _$identity);
 }
 
 abstract class _SettingScreenState implements SettingScreenState {
-  const factory _SettingScreenState() = _$_SettingScreenState;
+  const factory _SettingScreenState(
+      {String LineID,
+      String TwiterID,
+      String InstagramID,
+      String FaceBookID}) = _$_SettingScreenState;
+
+  @override
+  String get LineID => throw _privateConstructorUsedError;
+  @override
+  String get TwiterID => throw _privateConstructorUsedError;
+  @override
+  String get InstagramID => throw _privateConstructorUsedError;
+  @override
+  String get FaceBookID => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$SettingScreenStateCopyWith<_SettingScreenState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
