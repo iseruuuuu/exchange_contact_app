@@ -36,10 +36,7 @@ class _HomeState extends State<Home> {
           body: Container(
             width: double.infinity,
             child: GridView.count(
-              // Create a grid with 2 columns. If you change the scrollDirection to
-              // horizontal, this produces 2 rows.
               crossAxisCount: 2,
-              // Generate 100 widgets that display their index in the List.
               children: [
                 CellItem(name: 'LINE',
                     color: Colors.green

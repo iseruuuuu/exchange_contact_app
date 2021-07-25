@@ -30,7 +30,6 @@ class SettingScreen extends StatelessWidget {
                 ),
               ),
             ],
-            //TODO　サイズの調整
             leading: TextButton(
               onPressed: () => context.read<SettingScreenController>().onTapBack(),
               child: const Text(

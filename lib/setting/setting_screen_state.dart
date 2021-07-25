@@ -24,8 +24,8 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
   final BuildContext context;
   final SharePreference sharePreference;
 
+  @override
   void initState() {
-    //TODO データの取得
     sharePreference.getString(PreferenceKey.LineID).then((lineID) {
       if (lineID.isEmpty) return;
       state = state.copyWith(
