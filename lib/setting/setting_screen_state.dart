@@ -80,4 +80,26 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
     Navigator.of(context).pop();
   }
 
+  void onChangeLine(String text) {
+    state = state.copyWith(
+      LineID: text,
+    );
+  }
+  void onChangeTwiter(String text) {
+    state = state.copyWith(
+      TwiterID: text,
+    );
+  }
+
+  void onChangeInstagram(String text) {
+    state = state.copyWith(
+      InstagramID: text,
+    );
+  }
+
+  void onChangeFaceBook(String text) {
+    state = state.copyWith(
+      FaceBookID: text,
+    );
+  }
 }

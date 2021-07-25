@@ -5,10 +5,12 @@ class KeybordItem extends StatelessWidget {
     Key? key,
     required this.name,
     required this.color,
+    required this.onChange,
   }) : super(key: key);
 
   final String name;
   final Color color;
+  final Function() onChange;
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +31,7 @@ class KeybordItem extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: TextField(
            // controller: _controller,
-            onChanged: (text) {
-              String name;
-              name = text;
-            },
+            onChanged: onChange(),
             obscureText: true,
             decoration: InputDecoration(
               border: OutlineInputBorder(),

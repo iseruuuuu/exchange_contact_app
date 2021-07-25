@@ -44,10 +44,26 @@ class SettingScreen extends StatelessWidget {
           body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              KeybordItem(name: 'LINE',color: Colors.green,),
-              KeybordItem(name: 'Twiter',color: Colors.lightBlueAccent,),
-              KeybordItem(name: 'Instagram',color: Colors.deepPurple,),
-              KeybordItem(name: 'Facebook',color: Colors.blue),
+              KeybordItem(
+                name: 'LINE',
+                color: Colors.green,
+                onChange: context.read<SettingScreenController>().onChangeLine(text),
+              ),
+              KeybordItem(
+                name: 'Twiter'
+                ,color: Colors.lightBlueAccent,
+                onChange: context.read<SettingScreenController>().onChangeTwiter(text),
+              ),
+              KeybordItem(
+                name: 'Instagram',
+                color: Colors.deepPurple,
+                onChange: context.read<SettingScreenController>().onChangeTwiter(text),
+              ),
+              KeybordItem(
+                name: 'Facebook'
+                ,color: Colors.blue,
+                onChange: context.read<SettingScreenController>().onChangeTwiter(text),
+              ),
             ],
           ),
         );
