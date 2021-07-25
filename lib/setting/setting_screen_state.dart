@@ -72,7 +72,6 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
     final facebook = state.FaceBookID;
     sharePreference.setString(PreferenceKey.FaceBookID, facebook);
 
-
     //TODO 前の画面に戻る
     Navigator.of(context).pop();
   }
