@@ -1,4 +1,3 @@
-import 'package:exchange_contact_app/component/keybord_item.dart';
 import 'package:exchange_contact_app/component/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
@@ -43,26 +42,108 @@ class SettingScreen extends StatelessWidget {
           ),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
+            // ignore: prefer_const_literals_to_create_immutables
             children: <Widget>[
-              KeybordItem(
-                name: 'LINE',
-                color: Colors.green,
-                onChange: context.read<SettingScreenController>().onChangeLine(text),
+              const Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text(
+                  'LINE',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.green,
+                  ),
+                ),
               ),
-              KeybordItem(
-                name: 'Twiter'
-                ,color: Colors.lightBlueAccent,
-                onChange: context.read<SettingScreenController>().onChangeTwiter(text),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: TextField(
+                  // controller: _controller,
+                  onChanged: (text) {
+                    context.read<SettingScreenController>().onChangeLine(text);
+                  },
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'URL',
+                  ),
+                ),
               ),
-              KeybordItem(
-                name: 'Instagram',
-                color: Colors.deepPurple,
-                onChange: context.read<SettingScreenController>().onChangeTwiter(text),
+              const Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text(
+                  'Twiter',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.lightBlueAccent,
+                  ),
+                ),
               ),
-              KeybordItem(
-                name: 'Facebook'
-                ,color: Colors.blue,
-                onChange: context.read<SettingScreenController>().onChangeTwiter(text),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: TextField(
+                  // controller: _controller,
+                  onChanged: (text2) {
+                    context.read<SettingScreenController>().onChangeTwiter(text2);
+                  },
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'URL',
+                  ),
+                ),
+              ),
+
+
+
+              const Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text(
+                  'Instagram',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.deepPurple,
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: TextField(
+                  // controller: _controller,
+                  onChanged: (text3) {
+                    context.read<SettingScreenController>().onChangeInstagram(text3);
+                  },
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'URL',
+                  ),
+                ),
+              ),
+
+
+              const Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text(
+                  'Facebook',
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.blue,
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: TextField(
+                  // controller: _controller,
+                  onChanged: (text4) {
+                    context.read<SettingScreenController>().onChangeFaceBook(text4);
+                  },
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
+                    labelText: 'URL',
+                  ),
+                ),
               ),
             ],
           ),

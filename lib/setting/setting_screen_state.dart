@@ -101,5 +101,8 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
     state = state.copyWith(
       FaceBookID: text,
     );
+    final facebook = state.FaceBookID;
+    sharePreference.setString(PreferenceKey.FaceBookID, facebook);
   }
+
 }
