@@ -103,7 +103,6 @@ class SettingScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: TextField(
-                    // controller: _controller,
                     onChanged: (text2) {
                       context.read<SettingScreenController>().onChangeTwiter(text2);
                     },
