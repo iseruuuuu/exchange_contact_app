@@ -62,7 +62,7 @@ class _HomeState extends State<Home> {
                       child: BarcodeWidget(
                         barcode: Barcode.code128(),
                         //後で追加
-                        data: 'int',
+                        data: Line,
                         width: MediaQuery.of(context).size.width * 0.3,
                         height: 110,
                         drawText: false,
@@ -87,7 +87,7 @@ class _HomeState extends State<Home> {
                       child: BarcodeWidget(
                         barcode: Barcode.code128(),
                         //後で追加
-                        data: 'int',
+                        data: Twiter,
                         width: MediaQuery.of(context).size.width * 0.3,
                         height: 110,
                         drawText: false,
@@ -111,7 +111,7 @@ class _HomeState extends State<Home> {
                       child: BarcodeWidget(
                         barcode: Barcode.code128(),
                         //後で追加
-                        data: 'int',
+                        data: Instagram,
                         width: MediaQuery.of(context).size.width * 0.3,
                         height: 110,
                         drawText: false,
@@ -135,7 +135,7 @@ class _HomeState extends State<Home> {
                       child: BarcodeWidget(
                         barcode: Barcode.code128(),
                         //後で追加
-                        data: 'int',
+                        data: Facebook,
                         width: MediaQuery.of(context).size.width * 0.3,
                         height: 110,
                         drawText: false,
