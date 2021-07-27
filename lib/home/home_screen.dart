@@ -47,87 +47,102 @@ class _HomeState extends State<Home> {
               crossAxisCount: 2,
               children: [
 
-                const Text(
-                  'LINE',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.green,
-                  ),
-                ),
-                Container(
-                  color: Colors.white,
-                  padding: const EdgeInsets.all(20),
-                  child: BarcodeWidget(
-                    barcode: Barcode.code128(),
-                    //後で追加
-                    data: 'int',
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    height: 110,
-                    drawText: false,
-                  ),
-                ),
-
-                const Text(
-                  'LINE',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.green,
-                  ),
-                ),
-                Container(
-                  color: Colors.white,
-                  padding: const EdgeInsets.all(20),
-                  child: BarcodeWidget(
-                    barcode: Barcode.code128(),
-                    //後で追加
-                    data: 'int',
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    height: 110,
-                    drawText: false,
-                  ),
-                ),
-
-                const Text(
-                  'LINE',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.green,
-                  ),
-                ),
-                Container(
-                  color: Colors.white,
-                  padding: const EdgeInsets.all(20),
-                  child: BarcodeWidget(
-                    barcode: Barcode.code128(),
-                    //後で追加
-                    data: 'int',
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    height: 110,
-                    drawText: false,
-                  ),
-                ),
-
-                const Text(
-                  'LINE',
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.green,
-                  ),
-                ),
-                Container(
-                  color: Colors.white,
-                  padding: const EdgeInsets.all(20),
-                  child: BarcodeWidget(
-                    barcode: Barcode.code128(),
-                    //後で追加
-                    data: 'int',
-                    width: MediaQuery.of(context).size.width * 0.3,
-                    height: 110,
-                    drawText: false,
-                  ),
+                Column(
+                  children: [
+                    const Text(
+                      'LINE',
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.green,
+                      ),
+                    ),
+                    Container(
+                      color: Colors.white,
+                      padding: const EdgeInsets.all(20),
+                      child: BarcodeWidget(
+                        barcode: Barcode.code128(),
+                        //後で追加
+                        data: 'int',
+                        width: MediaQuery.of(context).size.width * 0.3,
+                        height: 110,
+                        drawText: false,
+                      ),
+                    ),
+                  ],
                 ),
 
 
+                Column(
+                  children: [
+                    const Text(
+                      'Twiter',
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.lightBlueAccent,
+                      ),
+                    ),
+                    Container(
+                      color: Colors.white,
+                      padding: const EdgeInsets.all(20),
+                      child: BarcodeWidget(
+                        barcode: Barcode.code128(),
+                        //後で追加
+                        data: 'int',
+                        width: MediaQuery.of(context).size.width * 0.3,
+                        height: 110,
+                        drawText: false,
+                      ),
+                    ),
+                  ],
+                ),
+
+                Column(
+                  children: [
+                    const Text(
+                      'Instagram',
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.purple,
+                      ),
+                    ),
+                    Container(
+                      color: Colors.white,
+                      padding: const EdgeInsets.all(20),
+                      child: BarcodeWidget(
+                        barcode: Barcode.code128(),
+                        //後で追加
+                        data: 'int',
+                        width: MediaQuery.of(context).size.width * 0.3,
+                        height: 110,
+                        drawText: false,
+                      ),
+                    ),
+                  ],
+                ),
+
+                Column(
+                  children: [
+                    const Text(
+                      'Facebook',
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.blue,
+                      ),
+                    ),
+                    Container(
+                      color: Colors.white,
+                      padding: const EdgeInsets.all(20),
+                      child: BarcodeWidget(
+                        barcode: Barcode.code128(),
+                        //後で追加
+                        data: 'int',
+                        width: MediaQuery.of(context).size.width * 0.3,
+                        height: 110,
+                        drawText: false,
+                      ),
+                    ),
+                  ],
+                ),
 
 
 
