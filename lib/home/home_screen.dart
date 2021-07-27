@@ -40,6 +40,12 @@ class _HomeState extends State<Home> {
               onPressed: () => context.read<HomeScreenController>().onTapSetting(),
               icon: const Icon(Icons.settings),
             ),
+            actions: [
+              IconButton(
+                onPressed: () => context.read<HomeScreenController>().onTapBarcodeCamera(),
+                icon: const Icon(Icons.camera_alt),
+              ),
+            ],
           ),
           body: Container(
             width: double.infinity,
