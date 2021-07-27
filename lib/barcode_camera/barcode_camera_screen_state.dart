@@ -1,18 +1,15 @@
 import 'package:exchange_contact_app/component/shared_preferences.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:state_notifier/state_notifier.dart';
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 part 'barcode_camera_screen_state.freezed.dart';
 
 @freezed
 abstract class BarcodeCameraScreenState with _$BarcodeCameraScreenState {
-  const factory BarcodeCameraScreenState({
-    @Default('') String LineID,
-    @Default('') String TwiterID,
-    @Default('') String InstagramID,
-    @Default('') String FaceBookID,
-  }) = _BarcodeCameraScreenState;
+  const factory BarcodeCameraScreenState() = _BarcodeCameraScreenState;
 
 }
 class BarcodeCameraScreenController extends StateNotifier<BarcodeCameraScreenState> with LocatorMixin {
@@ -26,81 +23,58 @@ class BarcodeCameraScreenController extends StateNotifier<BarcodeCameraScreenSta
 
   @override
   void initState() {
-    sharePreference.getString(PreferenceKey.LineID).then((lineID) {
-      if (lineID.isEmpty) return;
-      state = state.copyWith(
-        LineID: lineID,
-      );
+    super.initState();
+  }
+
+  Future barcodeScanning() async {
+    print('aaaaa');
+  }
+
+  Future<void> startBarcodeScanStream() async {
+    FlutterBarcodeScanner.getBarcodeStreamReceiver(
+        '#ff6666', 'Cancel', true, ScanMode.BARCODE)!
+        .listen((barcode) => print(barcode));
+  }
+
+  Future<void> scanQR() async {
+    String barcodeScanRes;
+    // Platform messages may fail, so we use a try/catch PlatformException.
+    try {
+      barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
+          '#ff6666', 'Cancel', true, ScanMode.QR);
+      print(barcodeScanRes);
+    } on PlatformException {
+      barcodeScanRes = 'Failed to get platform version.';
+    }
+    if (!mounted) return;
+
+    /*TODO  後で記載する
+    setState(() {
+      _scanBarcode = barcodeScanRes;
     });
 
-    sharePreference.getString(PreferenceKey.TwiterID).then((TwiterID) {
-      if (TwiterID.isEmpty) return;
-      state = state.copyWith(
-        TwiterID: TwiterID,
-      );
+     */
+
+
+  }
+
+  // Platform messages are asynchronous, so we initialize in an async method.
+  Future<void> scanBarcodeNormal() async {
+    String barcodeScanRes;
+    // Platform messages may fail, so we use a try/catch PlatformException.
+    try {
+      barcodeScanRes = await FlutterBarcodeScanner.scanBarcode(
+          '#ff6666', 'Cancel', true, ScanMode.BARCODE);
+      print(barcodeScanRes);
+    } on PlatformException {
+      barcodeScanRes = 'Failed to get platform version.';
+    }
+    if (!mounted) return;
+
+    /*TODO  後で記載する
+    setState(() {
+      _scanBarcode = barcodeScanRes;
     });
-
-    sharePreference.getString(PreferenceKey.InstagramID).then((InstagramID) {
-      if (InstagramID.isEmpty) return;
-      state = state.copyWith(
-        InstagramID: InstagramID,
-      );
-    });
-
-    sharePreference.getString(PreferenceKey.FaceBookID).then((FaceBookID) {
-      if (FaceBookID.isEmpty) return;
-      state = state.copyWith(
-        FaceBookID: FaceBookID,
-      );
-    });
+     */
   }
-
-  void onTapStore() {
-    //TODO ラインのURLを保存
-    final line = state.LineID;
-    sharePreference.setString(PreferenceKey.LineID, line);
-
-    //TODO TwiterのURLを保存
-    final twiter = state.TwiterID;
-    sharePreference.setString(PreferenceKey.TwiterID, twiter);
-
-    //TODO instagramのURLを保存
-    final instagram = state.InstagramID;
-    sharePreference.setString(PreferenceKey.InstagramID, instagram);
-
-    //TODO FaceBookのURLを保存
-    final facebook = state.FaceBookID;
-    sharePreference.setString(PreferenceKey.FaceBookID, facebook);
-
-    //TODO 前の画面に戻る
-    Navigator.of(context).pop();
-  }
-
-  void onTapBack() {
-    Navigator.of(context).pop();
-  }
-
-  void onChangeLine(String text) {
-    state = state.copyWith(
-      LineID: text,
-    );
-  }
-  void onChangeTwiter(String text) {
-    state = state.copyWith(
-      TwiterID: text,
-    );
-  }
-
-  void onChangeInstagram(String text) {
-    state = state.copyWith(
-      InstagramID: text,
-    );
-  }
-
-  void onChangeFaceBook(String text) {
-    state = state.copyWith(
-      FaceBookID: text,
-    );
-  }
-
 }

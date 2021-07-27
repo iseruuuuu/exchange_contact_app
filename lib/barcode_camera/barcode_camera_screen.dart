@@ -2,6 +2,7 @@ import 'package:exchange_contact_app/component/shared_preferences.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'barcode_camera_screen_state.dart';
+import 'package:provider/provider.dart';
 
 class BarcodeCameraScreen extends StatelessWidget {
   const BarcodeCameraScreen({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class BarcodeCameraScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => context.read<BarcodeCameraScreenController>().barcodeScanning(),
                   child: Text('読み込む'),
                 ),
               ],
