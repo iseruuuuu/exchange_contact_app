@@ -10,10 +10,10 @@ part 'home_screen_state.freezed.dart';
 @freezed
 abstract class HomeScreenState with _$HomeScreenState {
   const factory HomeScreenState({
-    @Default('') String LineID,
-    @Default('') String TwiterID,
-    @Default('') String InstagramID,
-    @Default('') String FaceBookID,
+    @Default('') String Line,
+    @Default('') String Twiter,
+    @Default('') String Instagram,
+    @Default('') String FaceBook,
   }) = _HomeScreenState;
 
 }
@@ -33,28 +33,28 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
     sharePreference.getString(PreferenceKey.LineID).then((lineID) {
       if (lineID.isEmpty) return;
       state = state.copyWith(
-        LineID: lineID,
+        Line: lineID,
       );
     });
 
     sharePreference.getString(PreferenceKey.TwiterID).then((TwiterID) {
       if (TwiterID.isEmpty) return;
       state = state.copyWith(
-        TwiterID: TwiterID,
+        Twiter: TwiterID,
       );
     });
 
     sharePreference.getString(PreferenceKey.InstagramID).then((InstagramID) {
       if (InstagramID.isEmpty) return;
       state = state.copyWith(
-        InstagramID: InstagramID,
+        Instagram: InstagramID,
       );
     });
 
     sharePreference.getString(PreferenceKey.FaceBookID).then((FaceBookID) {
       if (FaceBookID.isEmpty) return;
       state = state.copyWith(
-        FaceBookID: FaceBookID,
+        FaceBook: FaceBookID,
       );
     });
   }

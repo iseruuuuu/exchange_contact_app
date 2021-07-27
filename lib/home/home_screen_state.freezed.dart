@@ -17,15 +17,15 @@ class _$HomeScreenStateTearOff {
   const _$HomeScreenStateTearOff();
 
   _HomeScreenState call(
-      {String LineID = '',
-      String TwiterID = '',
-      String InstagramID = '',
-      String FaceBookID = ''}) {
+      {String Line = '',
+      String Twiter = '',
+      String Instagram = '',
+      String FaceBook = ''}) {
     return _HomeScreenState(
-      LineID: LineID,
-      TwiterID: TwiterID,
-      InstagramID: InstagramID,
-      FaceBookID: FaceBookID,
+      Line: Line,
+      Twiter: Twiter,
+      Instagram: Instagram,
+      FaceBook: FaceBook,
     );
   }
 }
@@ -35,10 +35,10 @@ const $HomeScreenState = _$HomeScreenStateTearOff();
 
 /// @nodoc
 mixin _$HomeScreenState {
-  String get LineID => throw _privateConstructorUsedError;
-  String get TwiterID => throw _privateConstructorUsedError;
-  String get InstagramID => throw _privateConstructorUsedError;
-  String get FaceBookID => throw _privateConstructorUsedError;
+  String get Line => throw _privateConstructorUsedError;
+  String get Twiter => throw _privateConstructorUsedError;
+  String get Instagram => throw _privateConstructorUsedError;
+  String get FaceBook => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $HomeScreenStateCopyWith<HomeScreenState> get copyWith =>
@@ -50,8 +50,7 @@ abstract class $HomeScreenStateCopyWith<$Res> {
   factory $HomeScreenStateCopyWith(
           HomeScreenState value, $Res Function(HomeScreenState) then) =
       _$HomeScreenStateCopyWithImpl<$Res>;
-  $Res call(
-      {String LineID, String TwiterID, String InstagramID, String FaceBookID});
+  $Res call({String Line, String Twiter, String Instagram, String FaceBook});
 }
 
 /// @nodoc
@@ -65,27 +64,27 @@ class _$HomeScreenStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? LineID = freezed,
-    Object? TwiterID = freezed,
-    Object? InstagramID = freezed,
-    Object? FaceBookID = freezed,
+    Object? Line = freezed,
+    Object? Twiter = freezed,
+    Object? Instagram = freezed,
+    Object? FaceBook = freezed,
   }) {
     return _then(_value.copyWith(
-      LineID: LineID == freezed
-          ? _value.LineID
-          : LineID // ignore: cast_nullable_to_non_nullable
+      Line: Line == freezed
+          ? _value.Line
+          : Line // ignore: cast_nullable_to_non_nullable
               as String,
-      TwiterID: TwiterID == freezed
-          ? _value.TwiterID
-          : TwiterID // ignore: cast_nullable_to_non_nullable
+      Twiter: Twiter == freezed
+          ? _value.Twiter
+          : Twiter // ignore: cast_nullable_to_non_nullable
               as String,
-      InstagramID: InstagramID == freezed
-          ? _value.InstagramID
-          : InstagramID // ignore: cast_nullable_to_non_nullable
+      Instagram: Instagram == freezed
+          ? _value.Instagram
+          : Instagram // ignore: cast_nullable_to_non_nullable
               as String,
-      FaceBookID: FaceBookID == freezed
-          ? _value.FaceBookID
-          : FaceBookID // ignore: cast_nullable_to_non_nullable
+      FaceBook: FaceBook == freezed
+          ? _value.FaceBook
+          : FaceBook // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -98,8 +97,7 @@ abstract class _$HomeScreenStateCopyWith<$Res>
           _HomeScreenState value, $Res Function(_HomeScreenState) then) =
       __$HomeScreenStateCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String LineID, String TwiterID, String InstagramID, String FaceBookID});
+  $Res call({String Line, String Twiter, String Instagram, String FaceBook});
 }
 
 /// @nodoc
@@ -115,27 +113,27 @@ class __$HomeScreenStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? LineID = freezed,
-    Object? TwiterID = freezed,
-    Object? InstagramID = freezed,
-    Object? FaceBookID = freezed,
+    Object? Line = freezed,
+    Object? Twiter = freezed,
+    Object? Instagram = freezed,
+    Object? FaceBook = freezed,
   }) {
     return _then(_HomeScreenState(
-      LineID: LineID == freezed
-          ? _value.LineID
-          : LineID // ignore: cast_nullable_to_non_nullable
+      Line: Line == freezed
+          ? _value.Line
+          : Line // ignore: cast_nullable_to_non_nullable
               as String,
-      TwiterID: TwiterID == freezed
-          ? _value.TwiterID
-          : TwiterID // ignore: cast_nullable_to_non_nullable
+      Twiter: Twiter == freezed
+          ? _value.Twiter
+          : Twiter // ignore: cast_nullable_to_non_nullable
               as String,
-      InstagramID: InstagramID == freezed
-          ? _value.InstagramID
-          : InstagramID // ignore: cast_nullable_to_non_nullable
+      Instagram: Instagram == freezed
+          ? _value.Instagram
+          : Instagram // ignore: cast_nullable_to_non_nullable
               as String,
-      FaceBookID: FaceBookID == freezed
-          ? _value.FaceBookID
-          : FaceBookID // ignore: cast_nullable_to_non_nullable
+      FaceBook: FaceBook == freezed
+          ? _value.FaceBook
+          : FaceBook // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -145,53 +143,52 @@ class __$HomeScreenStateCopyWithImpl<$Res>
 
 class _$_HomeScreenState implements _HomeScreenState {
   const _$_HomeScreenState(
-      {this.LineID = '',
-      this.TwiterID = '',
-      this.InstagramID = '',
-      this.FaceBookID = ''});
+      {this.Line = '',
+      this.Twiter = '',
+      this.Instagram = '',
+      this.FaceBook = ''});
 
   @JsonKey(defaultValue: '')
   @override
-  final String LineID;
+  final String Line;
   @JsonKey(defaultValue: '')
   @override
-  final String TwiterID;
+  final String Twiter;
   @JsonKey(defaultValue: '')
   @override
-  final String InstagramID;
+  final String Instagram;
   @JsonKey(defaultValue: '')
   @override
-  final String FaceBookID;
+  final String FaceBook;
 
   @override
   String toString() {
-    return 'HomeScreenState(LineID: $LineID, TwiterID: $TwiterID, InstagramID: $InstagramID, FaceBookID: $FaceBookID)';
+    return 'HomeScreenState(Line: $Line, Twiter: $Twiter, Instagram: $Instagram, FaceBook: $FaceBook)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _HomeScreenState &&
-            (identical(other.LineID, LineID) ||
-                const DeepCollectionEquality().equals(other.LineID, LineID)) &&
-            (identical(other.TwiterID, TwiterID) ||
+            (identical(other.Line, Line) ||
+                const DeepCollectionEquality().equals(other.Line, Line)) &&
+            (identical(other.Twiter, Twiter) ||
+                const DeepCollectionEquality().equals(other.Twiter, Twiter)) &&
+            (identical(other.Instagram, Instagram) ||
                 const DeepCollectionEquality()
-                    .equals(other.TwiterID, TwiterID)) &&
-            (identical(other.InstagramID, InstagramID) ||
+                    .equals(other.Instagram, Instagram)) &&
+            (identical(other.FaceBook, FaceBook) ||
                 const DeepCollectionEquality()
-                    .equals(other.InstagramID, InstagramID)) &&
-            (identical(other.FaceBookID, FaceBookID) ||
-                const DeepCollectionEquality()
-                    .equals(other.FaceBookID, FaceBookID)));
+                    .equals(other.FaceBook, FaceBook)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(LineID) ^
-      const DeepCollectionEquality().hash(TwiterID) ^
-      const DeepCollectionEquality().hash(InstagramID) ^
-      const DeepCollectionEquality().hash(FaceBookID);
+      const DeepCollectionEquality().hash(Line) ^
+      const DeepCollectionEquality().hash(Twiter) ^
+      const DeepCollectionEquality().hash(Instagram) ^
+      const DeepCollectionEquality().hash(FaceBook);
 
   @JsonKey(ignore: true)
   @override
@@ -201,19 +198,19 @@ class _$_HomeScreenState implements _HomeScreenState {
 
 abstract class _HomeScreenState implements HomeScreenState {
   const factory _HomeScreenState(
-      {String LineID,
-      String TwiterID,
-      String InstagramID,
-      String FaceBookID}) = _$_HomeScreenState;
+      {String Line,
+      String Twiter,
+      String Instagram,
+      String FaceBook}) = _$_HomeScreenState;
 
   @override
-  String get LineID => throw _privateConstructorUsedError;
+  String get Line => throw _privateConstructorUsedError;
   @override
-  String get TwiterID => throw _privateConstructorUsedError;
+  String get Twiter => throw _privateConstructorUsedError;
   @override
-  String get InstagramID => throw _privateConstructorUsedError;
+  String get Instagram => throw _privateConstructorUsedError;
   @override
-  String get FaceBookID => throw _privateConstructorUsedError;
+  String get FaceBook => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$HomeScreenStateCopyWith<_HomeScreenState> get copyWith =>

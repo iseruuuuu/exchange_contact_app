@@ -1,8 +1,9 @@
+import 'package:exchange_contact_app/component/cell_item.dart';
 import 'package:exchange_contact_app/component/shared_preferences.dart';
 import 'package:flutter/material.dart';
-import '../component/cell_item.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'home_screen_state.dart';
+
 import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
@@ -20,7 +21,14 @@ class _HomeState extends State<Home> {
     return StateNotifierProvider<HomeScreenController, HomeScreenState>(
       create: (context) => HomeScreenController(context: context, sharePreference: SharePreference()),
       builder: (context, _) {
+        final Line = context.select<HomeScreenState, String>((state) => state.Line);
+        final Twiter = context.select<HomeScreenState, String>((state) => state.Twiter);
+        final Instagram = context.select<HomeScreenState, String>((state) => state.Instagram);
+        final Facebook = context.select<HomeScreenState, String>((state) => state.FaceBook);
         return Scaffold(
+
+
+
           appBar: AppBar(
             title: const Text(
               '',
