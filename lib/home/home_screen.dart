@@ -69,7 +69,7 @@ class _HomeState extends State<Home> {
                     ),
                     QrImage(
                       data: 'https://twitter.com/blendthink',
-                      size: 100,
+                      size: MediaQuery.of(context).size.width / 3,
                     ),
                   ],
                 ),
@@ -85,7 +85,7 @@ class _HomeState extends State<Home> {
                     QrImage(
                       //data: 'https://twitter.com/$Twiter',
                       data: 'https://twitter.com/$Twiter',
-                      size: 100,
+                      size: MediaQuery.of(context).size.width / 3,
                     ),
                   ],
                 ),
@@ -101,7 +101,7 @@ class _HomeState extends State<Home> {
                     ),
                     QrImage(
                       data: 'date',
-                      size: 100,
+                      size: MediaQuery.of(context).size.width / 3,
                     ),
                   ],
                 ),
@@ -117,7 +117,7 @@ class _HomeState extends State<Home> {
                     ),
                     QrImage(
                       data: 'https://twitter.com/blendthinkkkk',
-                      size: 100,
+                      size: MediaQuery.of(context).size.width / 3,
                     ),
                   ],
                 ),
