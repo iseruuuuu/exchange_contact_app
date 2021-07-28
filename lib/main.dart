@@ -1,4 +1,3 @@
-import 'package:exchange_contact_app/barcode_screen/barcode_screen.dart';
 import 'package:flutter/material.dart';
 import 'home/home_screen.dart';
 

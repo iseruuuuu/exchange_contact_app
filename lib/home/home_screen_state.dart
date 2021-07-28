@@ -1,4 +1,3 @@
-import 'package:exchange_contact_app/barcode_camera/barcode_camera_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -64,15 +63,6 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
       context,
       MaterialPageRoute(
         builder: (context) => const SettingScreen(),
-      ),
-    );
-  }
-
-  void onTapBarcodeCamera() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const BarcodeCameraScreen(),
       ),
     );
   }
