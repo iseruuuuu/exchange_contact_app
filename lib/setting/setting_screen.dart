@@ -59,11 +59,14 @@ class SettingScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text(
-                  Line,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.green,
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    Line,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.green,
+                    ),
                   ),
                 ),
 
@@ -92,11 +95,14 @@ class SettingScreen extends StatelessWidget {
                   ),
                 ),
 
-                Text(
-                  Twiter,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.green,
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    Twiter,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.green,
+                    ),
                   ),
                 ),
 
@@ -124,11 +130,14 @@ class SettingScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text(
-                  Instagram,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.green,
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    Instagram,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.green,
+                    ),
                   ),
                 ),
                 Padding(
@@ -154,11 +163,14 @@ class SettingScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text(
-                  FaceBook,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    color: Colors.green,
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Text(
+                    FaceBook,
+                    style: const TextStyle(
+                      fontSize: 20,
+                      color: Colors.green,
+                    ),
                   ),
                 ),
 
