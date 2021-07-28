@@ -84,7 +84,7 @@ class _HomeState extends State<Home> {
                     ),
                     QrImage(
                       //data: 'https://twitter.com/$Twiter',
-                      data: 'https://twitter.com/$Twiter',
+                      data: 'https://twitter.com/' + Twiter,
                       size: MediaQuery.of(context).size.width / 3,
                     ),
                   ],
@@ -100,7 +100,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     QrImage(
-                      data: 'https://www.instagram.com/iseki_ryutaro',
+                      data: 'https://www.instagram.com/' + Instagram,
                       size: MediaQuery.of(context).size.width / 3,
                     ),
                   ],
