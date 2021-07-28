@@ -1,8 +1,6 @@
-import 'package:exchange_contact_app/component/cell_item.dart';
 import 'package:exchange_contact_app/component/shared_preferences.dart';
 import 'package:ai_barcode/ai_barcode.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
-import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'home_screen_state.dart';
