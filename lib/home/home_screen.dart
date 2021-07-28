@@ -100,7 +100,7 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     QrImage(
-                      data: 'date',
+                      data: 'https://www.instagram.com/iseki_ryutaro',
                       size: MediaQuery.of(context).size.width / 3,
                     ),
                   ],
