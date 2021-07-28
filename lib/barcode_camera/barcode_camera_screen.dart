@@ -30,6 +30,7 @@ class BarcodeCameraScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
+                  //onPressed: () => context.read<BarcodeCameraScreenController>().scanQR(),
                   onPressed: () => context.read<BarcodeCameraScreenController>().barcodeScanning(),
                   child: Text('読み込む'),
                 ),

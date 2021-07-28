@@ -52,7 +52,11 @@ dev_dependencies:
   flutter_state_notifier:
   shared_preferences:
   enum_to_string:
-  flutter_barcode_scanner:
+  ai_barcode: ^3.0.1
+
+  #QR
+
+  qr_flutter:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

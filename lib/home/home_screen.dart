@@ -1,10 +1,13 @@
 import 'package:exchange_contact_app/component/cell_item.dart';
 import 'package:exchange_contact_app/component/shared_preferences.dart';
+import 'package:ai_barcode/ai_barcode.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:barcode_widget/barcode_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'home_screen_state.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+
 
 
 class Home extends StatefulWidget {
@@ -15,6 +18,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  CreatorController? _creatorController;
 
   @override
   Widget build(BuildContext context) {
@@ -62,22 +67,12 @@ class _HomeState extends State<Home> {
                         color: Colors.green,
                       ),
                     ),
-                    Container(
-                      color: Colors.white,
-                      padding: const EdgeInsets.all(20),
-                      child: BarcodeWidget(
-                        barcode: Barcode.code128(),
-                        //後で追加
-                        data: Line,
-                        width: MediaQuery.of(context).size.width * 0.3,
-                        height: 110,
-                        drawText: false,
-                      ),
+                    QrImage(
+                      data: 'https://twitter.com/blendthink',
+                      size: 100,
                     ),
                   ],
                 ),
-
-
                 Column(
                   children: [
                     const Text(
@@ -87,17 +82,10 @@ class _HomeState extends State<Home> {
                         color: Colors.lightBlueAccent,
                       ),
                     ),
-                    Container(
-                      color: Colors.white,
-                      padding: const EdgeInsets.all(20),
-                      child: BarcodeWidget(
-                        barcode: Barcode.code128(),
-                        //後で追加
-                        data: Twiter,
-                        width: MediaQuery.of(context).size.width * 0.3,
-                        height: 110,
-                        drawText: false,
-                      ),
+                    QrImage(
+                      //data: 'https://twitter.com/$Twiter',
+                      data: 'https://twitter.com/$Twiter',
+                      size: 100,
                     ),
                   ],
                 ),
@@ -111,17 +99,9 @@ class _HomeState extends State<Home> {
                         color: Colors.purple,
                       ),
                     ),
-                    Container(
-                      color: Colors.white,
-                      padding: const EdgeInsets.all(20),
-                      child: BarcodeWidget(
-                        barcode: Barcode.code128(),
-                        //後で追加
-                        data: Instagram,
-                        width: MediaQuery.of(context).size.width * 0.3,
-                        height: 110,
-                        drawText: false,
-                      ),
+                    QrImage(
+                      data: 'date',
+                      size: 100,
                     ),
                   ],
                 ),
@@ -135,17 +115,9 @@ class _HomeState extends State<Home> {
                         color: Colors.blue,
                       ),
                     ),
-                    Container(
-                      color: Colors.white,
-                      padding: const EdgeInsets.all(20),
-                      child: BarcodeWidget(
-                        barcode: Barcode.code128(),
-                        //後で追加
-                        data: Facebook,
-                        width: MediaQuery.of(context).size.width * 0.3,
-                        height: 110,
-                        drawText: false,
-                      ),
+                    QrImage(
+                      data: 'https://twitter.com/blendthinkkkk',
+                      size: 100,
                     ),
                   ],
                 ),

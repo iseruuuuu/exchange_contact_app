@@ -104,7 +104,7 @@ class SettingScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: TextField(
                     onChanged: (text2) {
-                      context.read<SettingScreenController>().onChangeTwiter(text2);
+                      context.read<SettingScreenController>().onChangeTwiter('@' + text2);
                     },
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(),
@@ -112,6 +112,8 @@ class SettingScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+
+
                 const Padding(
                   padding: EdgeInsets.all(15.0),
                   child: Text(
