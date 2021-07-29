@@ -50,22 +50,31 @@ class _HomeState extends State<Home> {
             child: GridView.count(
               crossAxisCount: 2,
               children: [
-
-                Column(
-                  children: [
-                    const Text(
-                      'LINE',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.green,
+                  Column(
+                    children: [
+                      const Text(
+                        'LINE',
+                        style: TextStyle(
+                          fontSize: 30,
+                          color: Colors.green,
+                        ),
                       ),
-                    ),
-                    QrImage(
-                      data: Line,
-                      size: MediaQuery.of(context).size.width / 3,
-                    ),
-                  ],
-                ),
+                        Container(
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: Colors.green,
+                              width: 2,
+                            ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                        child: QrImage(
+                          data: Line,
+                          size: MediaQuery.of(context).size.width / 2.5,
+                        ),
+                      ),
+                    ],
+                  ),
+
                 Column(
                   children: [
                     const Text(
@@ -75,9 +84,18 @@ class _HomeState extends State<Home> {
                         color: Colors.lightBlueAccent,
                       ),
                     ),
-                    QrImage(
-                      data: 'https://twitter.com/' + Twiter,
-                      size: MediaQuery.of(context).size.width / 3,
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.lightBlueAccent,
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: QrImage(
+                        data: 'https://twitter.com/' + Twiter,
+                        size: MediaQuery.of(context).size.width / 2.5,
+                      ),
                     ),
                   ],
                 ),
@@ -91,9 +109,18 @@ class _HomeState extends State<Home> {
                         color: Colors.purple,
                       ),
                     ),
-                    QrImage(
-                      data: 'https://www.instagram.com/' + Instagram,
-                      size: MediaQuery.of(context).size.width / 3,
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.purple,
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: QrImage(
+                        data: 'https://www.instagram.com/' + Instagram,
+                        size: MediaQuery.of(context).size.width / 2.5,
+                      ),
                     ),
                   ],
                 ),
@@ -107,9 +134,18 @@ class _HomeState extends State<Home> {
                         color: Colors.blue,
                       ),
                     ),
-                    QrImage(
-                      data: Facebook,
-                      size: MediaQuery.of(context).size.width / 3,
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.blue,
+                          width: 2,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: QrImage(
+                        data: Facebook,
+                        size: MediaQuery.of(context).size.width / 2.5,
+                      ),
                     ),
                   ],
                 ),
