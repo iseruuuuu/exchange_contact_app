@@ -42,6 +42,17 @@ class _HomeState extends State<Home> {
                 size: 30,
               ),
             ),
+            actions: [
+              IconButton(
+                onPressed: () => context.read<HomeScreenController>().onTapTutorial(),
+                icon: const Icon(
+                  Icons.warning_amber_outlined,
+                  color: Colors.blueAccent,
+                  size: 30,
+                ),
+
+              ),
+            ],
           ),
           body: SizedBox(
             width: double.infinity,

@@ -1,3 +1,4 @@
+import 'package:exchange_contact_app/tutorial/tutorial_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -64,6 +65,16 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
       MaterialPageRoute(
         builder: (context) => const SettingScreen(),
         fullscreenDialog: true,
+      ),
+    );
+  }
+
+  void onTapTutorial() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => TutorialScreen(),
+        fullscreenDialog: true
       ),
     );
   }

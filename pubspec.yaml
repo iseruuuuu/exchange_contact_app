@@ -58,6 +58,9 @@ dev_dependencies:
   ai_barcode: ^3.0.1
   qr_flutter:
 
+  #tutorial
+  flutter_overboard: ^2.0.1
+
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
