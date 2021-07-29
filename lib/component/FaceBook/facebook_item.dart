@@ -20,17 +20,22 @@ class FacebookBarcodeItem extends StatelessWidget {
             color: Colors.blue,
           ),
         ),
-        Container(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.blue,
-              width: 2,
+        GestureDetector(
+          onTap: () {
+            print(Facebook);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.blue,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.circular(10),
             ),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: QrImage(
-            data: Facebook,
-            size: MediaQuery.of(context).size.width / 2.7,
+            child: QrImage(
+              data: Facebook,
+              size: MediaQuery.of(context).size.width / 2.7,
+            ),
           ),
         ),
       ],

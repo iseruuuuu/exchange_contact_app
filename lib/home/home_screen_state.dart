@@ -57,6 +57,7 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
         FaceBookID: FaceBookID,
       );
     });
+
   }
 
   void onTapSetting() {

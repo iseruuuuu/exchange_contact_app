@@ -72,6 +72,11 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
 
     //TODO 状態を反映させる
     initState();
+
+    print(line);
+    print(twiter);
+    print(instagram);
+    print(facebook);
   }
 
   void onTapBack() {

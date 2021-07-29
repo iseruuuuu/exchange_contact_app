@@ -21,17 +21,22 @@ class InstagramBarcodeItem extends StatelessWidget {
             color: Colors.purple,
           ),
         ),
-        Container(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.purple,
-              width: 2,
+        GestureDetector(
+          onTap: () {
+            print(Instagram);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.purple,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.circular(10),
             ),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: QrImage(
-            data: 'https://www.instagram.com/' + Instagram,
-            size: MediaQuery.of(context).size.width / 2.7,
+            child: QrImage(
+              data: 'https://www.instagram.com/' + Instagram,
+              size: MediaQuery.of(context).size.width / 2.7,
+            ),
           ),
         ),
       ],

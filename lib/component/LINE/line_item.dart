@@ -20,20 +20,22 @@ class LineBarcodeItem extends StatelessWidget {
             color: Colors.green,
           ),
         ),
-        Container(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.green,
-              width: 2,
+        GestureDetector(
+          onTap: () {
+            print(Line);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.green,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.circular(10),
             ),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: QrImage(
-            data: Line,
-            size: MediaQuery
-                .of(context)
-                .size
-                .width / 2.7,
+            child: QrImage(
+              data: Line,
+              size: MediaQuery.of(context).size.width / 2.7,
+            ),
           ),
         ),
       ],

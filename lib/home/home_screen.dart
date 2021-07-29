@@ -37,9 +37,9 @@ class _HomeState extends State<Home> {
             leading: IconButton(
               onPressed: () => context.read<HomeScreenController>().onTapSetting(),
               icon: const Icon(
-                Icons.face,
+                Icons.account_circle,
                 color: Colors.blueAccent,
-                size: 30,
+                size: 45,
               ),
             ),
             actions: [

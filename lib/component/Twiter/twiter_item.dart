@@ -20,17 +20,22 @@ class TwiterBarcodeItem extends StatelessWidget {
             color: Colors.lightBlueAccent,
           ),
         ),
-        Container(
-          decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.lightBlueAccent,
-              width: 2,
+        GestureDetector(
+          onTap: () {
+            print(Twiter);
+          },
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border.all(
+                color: Colors.lightBlueAccent,
+                width: 2,
+              ),
+              borderRadius: BorderRadius.circular(10),
             ),
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: QrImage(
-            data: 'https://twitter.com/' + Twiter,
-            size: MediaQuery.of(context).size.width / 2.7,
+            child: QrImage(
+              data: 'https://twitter.com/' + Twiter,
+              size: MediaQuery.of(context).size.width / 2.7,
+            ),
           ),
         ),
       ],

@@ -29,23 +29,13 @@ class TutorialScreen extends StatelessWidget {
       body: 'あらかじめ登録することで、簡単に連絡先を渡すことができます。',
       doAnimateImage: true,
     ),
-    PageModel(
-      color: const Color(0xFF9B90BC),
-      imageAssetPath: 'assets/1.png',
-      title: '登録方法',
-      body: 'LINEは、\n'
-          'Twiterは、\n'
-          'Instagramは、\n'
-          'FaceBookは、\n'
-      ,
-      doAnimateImage: true,
-    ),
 
     PageModel(
       color: Colors.blueAccent,
       imageAssetPath: 'assets/1.png',
       title: '相手に連絡先を渡す方法',
-      body: 'QRコードを相手に見せてください。',
+      body: 'カメラまたは、このアプリを開いてもらってください。\n'
+          'そして、あなたのQRコードを見せてあげてください。',
       doAnimateImage: true,
     ),
 
@@ -53,7 +43,8 @@ class TutorialScreen extends StatelessWidget {
       color: Colors.green,
       imageAssetPath: 'assets/1.png',
       title: 'アカウントの変更方法',
-      body: '設定画面にていつでも変更可能です。',
+      body: '設定画面にていつでも変更可能です。\n'
+          '👤のボタンを押してみてください',
       doAnimateImage: true,
     ),
 
