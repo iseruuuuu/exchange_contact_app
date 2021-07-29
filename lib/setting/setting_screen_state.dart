@@ -74,6 +74,10 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
 
     //TODO 前の画面に戻る
     Navigator.of(context).pop();
+
+    //TODO 状態を反映させる
+    initState();
+
   }
 
   void onTapBack() {

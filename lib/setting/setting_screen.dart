@@ -51,11 +51,13 @@ class SettingScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
-                    'LINE：' + Line,
+                    'LINE\n'
+                        + Line,
                     style: const TextStyle(
                       fontSize: 18,
                       color: Colors.green,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 Padding(
@@ -74,11 +76,13 @@ class SettingScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
-                    'Twiter：' + Twiter,
+                    'Twiter\n'
+                        + Twiter,
                     style: const TextStyle(
                       fontSize: 18,
                       color: Colors.lightBlueAccent,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
 
@@ -99,11 +103,13 @@ class SettingScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
-                    'Instagram：' + Instagram,
+                    'Instagram\n'
+                        '' + Instagram,
                     style: const TextStyle(
                       fontSize: 18,
                       color: Colors.deepPurple,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
 
@@ -123,11 +129,13 @@ class SettingScreen extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
-                    'Facebook：' + FaceBook,
+                    'Facebook\n'
+                        + FaceBook,
                     style: const TextStyle(
                       fontSize: 18,
                       color: Colors.blue,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ),
 

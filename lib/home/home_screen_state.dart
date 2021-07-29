@@ -28,6 +28,7 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
 
   @override
   void initState() {
+    super.initState();
     sharePreference.getString(PreferenceKey.LineID).then((lineID) {
       if (lineID.isEmpty) return;
       state = state.copyWith(
@@ -56,7 +57,6 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
       );
     });
   }
-
 
   void onTapSetting() {
     Navigator.push(

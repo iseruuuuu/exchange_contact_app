@@ -32,16 +32,17 @@ class _HomeState extends State<Home> {
         final Instagram = context.select<HomeScreenState, String>((state) => state.InstagramID);
         final Facebook = context.select<HomeScreenState, String>((state) => state.FaceBookID);
         return Scaffold(
+          backgroundColor: Colors.white,
           appBar: AppBar(
-            title: const Text(
-              '',
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            ),
+            elevation: 2,
+            backgroundColor: Colors.white,
             leading: IconButton(
               onPressed: () => context.read<HomeScreenController>().onTapSetting(),
-              icon: const Icon(Icons.settings),
+              icon: const Icon(
+                Icons.face,
+                color: Colors.blueAccent,
+                size: 30,
+              ),
             ),
           ),
           body: Container(
@@ -75,7 +76,6 @@ class _HomeState extends State<Home> {
                       ),
                     ),
                     QrImage(
-                      //data: 'https://twitter.com/$Twiter',
                       data: 'https://twitter.com/' + Twiter,
                       size: MediaQuery.of(context).size.width / 3,
                     ),
@@ -113,25 +113,6 @@ class _HomeState extends State<Home> {
                     ),
                   ],
                 ),
-
-
-
-
-
-                /*
-                CellItem(name: 'LINE',
-                    color: Colors.green
-                ),
-                CellItem(
-                  name: 'Twiter',
-                  color: Colors.lightBlueAccent,
-                ),
-                CellItem(
-                  name: 'Instagram',
-                  color: Colors.purple,
-                ),
-
-                 */
               ],
             ),
           ),
