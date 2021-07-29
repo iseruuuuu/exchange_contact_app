@@ -1,6 +1,6 @@
 # exchange_contact_app
 
-A new Flutter project.
+相手との連絡先交換
 
 ## Getting Started
 
@@ -11,11 +11,13 @@ TODOリスト
 ・初期のバーコードを決めておく（適当な値にしておく）  
 ・画面のデザイン  
 ・保存をして画面に戻ったら、QRコードを反映させる。  
-
 ・LINE　URL完了  
 ・Twiter　URL完了  
 ・Instagram　URL完了  
 ・Facebook　URL完了  
+
+・チュートリアル画面を作る
+・登録方法を記載する
 
 
 TOBEリスト

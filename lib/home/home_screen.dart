@@ -64,7 +64,7 @@ class _HomeState extends State<Home> {
                       ),
                       child: QrImage(
                         data: Line,
-                        size: MediaQuery.of(context).size.width / 2.5,
+                        size: MediaQuery.of(context).size.width / 2.7,
                       ),
                     ),
                   ],
@@ -89,7 +89,7 @@ class _HomeState extends State<Home> {
                       ),
                       child: QrImage(
                         data: 'https://twitter.com/' + Twiter,
-                        size: MediaQuery.of(context).size.width / 2.5,
+                        size: MediaQuery.of(context).size.width / 2.7,
                       ),
                     ),
                   ],
@@ -113,7 +113,7 @@ class _HomeState extends State<Home> {
                       ),
                       child: QrImage(
                         data: 'https://www.instagram.com/' + Instagram,
-                        size: MediaQuery.of(context).size.width / 2.5,
+                        size: MediaQuery.of(context).size.width / 2.7,
                       ),
                     ),
                   ],
@@ -138,7 +138,7 @@ class _HomeState extends State<Home> {
                       ),
                       child: QrImage(
                         data: Facebook,
-                        size: MediaQuery.of(context).size.width / 2.5,
+                        size: MediaQuery.of(context).size.width / 2.7,
                       ),
                     ),
                   ],

@@ -59,7 +59,6 @@ class SettingScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
                     'LINE\n'
-                        '\n'
                         + Line,
                     style: const TextStyle(
                       fontSize: 18,
@@ -85,7 +84,6 @@ class SettingScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
                     'Twiter\n'
-                        '\n'
                         + Twiter,
                     style: const TextStyle(
                       fontSize: 18,
@@ -110,7 +108,6 @@ class SettingScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
                     'Instagram\n'
-                        '\n'
                         '' + Instagram,
                     style: const TextStyle(
                       fontSize: 18,
@@ -135,7 +132,6 @@ class SettingScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
                     'Facebook\n'
-                        '\n'
                         + FaceBook,
                     style: const TextStyle(
                       fontSize: 18,

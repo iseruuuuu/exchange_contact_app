@@ -63,6 +63,7 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
       context,
       MaterialPageRoute(
         builder: (context) => const SettingScreen(),
+        fullscreenDialog: true,
       ),
     );
   }
