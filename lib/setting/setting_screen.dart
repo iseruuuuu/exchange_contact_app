@@ -20,7 +20,7 @@ class SettingScreen extends StatelessWidget {
           appBar: AppBar(
             actions: [
               Padding(
-                padding: const EdgeInsets.only(right: 10),
+                padding: const EdgeInsets.only(right: 15),
                 child: TextButton(
                   onPressed: () => context.read<SettingScreenController>().onTapStore(),
                   child: const Text(
@@ -33,13 +33,12 @@ class SettingScreen extends StatelessWidget {
                 ),
               ),
             ],
-            leading: TextButton(
-              onPressed: () => context.read<SettingScreenController>().onTapBack(),
-              child: const Text(
-                '戻る',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white,
+            leading: Container(
+              alignment: FractionalOffset.centerLeft,
+              child: IconButton(
+                onPressed: () => context.read<SettingScreenController>().onTapBack(),
+                icon: const Icon(
+                  Icons.arrow_back,
                 ),
               ),
             ),
