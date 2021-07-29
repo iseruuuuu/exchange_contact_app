@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_overboard/flutter_overboard.dart';
 
-class TutorialScreen extends StatelessWidget {
+class InstagramTutorialScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

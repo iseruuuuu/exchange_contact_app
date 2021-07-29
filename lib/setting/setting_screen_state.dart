@@ -1,5 +1,10 @@
 import 'package:exchange_contact_app/component/shared_preferences.dart';
+import 'package:exchange_contact_app/tutorial/facebook_tutorial_screen.dart';
+import 'package:exchange_contact_app/tutorial/instagram_tutorial_screen.dart';
+import 'package:exchange_contact_app/tutorial/line_tutorial_screen.dart';
+import 'package:exchange_contact_app/tutorial/twiter_tutorial_screen.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:state_notifier/state_notifier.dart';
 
@@ -103,6 +108,46 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
   void onChangeFaceBook(String text) {
     state = state.copyWith(
       FaceBookID: text,
+    );
+  }
+
+  void onTapLineTutorial() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => LineTutorialScreen(),
+        fullscreenDialog: true,
+      ),
+    );
+  }
+
+  void onTapTwiterTutorial() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => TwiterTutorialScreen(),
+        fullscreenDialog: true,
+      ),
+    );
+  }
+
+  void onTapInstagramTutorial() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => InstagramTutorialScreen(),
+        fullscreenDialog: true,
+      ),
+    );
+  }
+
+  void onTapFaceBookTutorial() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => FacebookTutorialScreen(),
+        fullscreenDialog: true,
+      ),
     );
   }
 
