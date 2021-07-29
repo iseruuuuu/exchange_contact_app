@@ -45,107 +45,163 @@ class _HomeState extends State<Home> {
             child: GridView.count(
               crossAxisCount: 2,
               children: [
-                Column(
-                  children: [
-                    const Text(
-                      'LINE',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.green,
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.green,
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: QrImage(
-                        data: Line,
-                        size: MediaQuery.of(context).size.width / 2.7,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    const Text(
-                      'Twiter',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.lightBlueAccent,
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.lightBlueAccent,
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: QrImage(
-                        data: 'https://twitter.com/' + Twiter,
-                        size: MediaQuery.of(context).size.width / 2.7,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    const Text(
-                      'Instagram',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.purple,
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.purple,
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: QrImage(
-                        data: 'https://www.instagram.com/' + Instagram,
-                        size: MediaQuery.of(context).size.width / 2.7,
-                      ),
-                    ),
-                  ],
-                ),
-                Column(
-                  children: [
-                    const Text(
-                      'Facebook',
-                      style: TextStyle(
-                        fontSize: 30,
-                        color: Colors.blue,
-                      ),
-                    ),
-                    Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.blue,
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: QrImage(
-                        data: Facebook,
-                        size: MediaQuery.of(context).size.width / 2.7,
-                      ),
-                    ),
-                  ],
-                ),
+                LineBarcodeItem(Line: Line),
+                TwiterBarcodeItem(Twiter: Twiter),
+                InstagramBarcodeItem(Instagram: Instagram),
+                FacebookBarcodeItem(Facebook: Facebook),
               ],
             ),
           ),
         );
       },
+    );
+  }
+}
+
+class FacebookBarcodeItem extends StatelessWidget {
+  const FacebookBarcodeItem({
+    Key? key,
+    required this.Facebook,
+  }) : super(key: key);
+
+  final String Facebook;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Text(
+          'Facebook',
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.blue,
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.blue,
+              width: 2,
+            ),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: QrImage(
+            data: Facebook,
+            size: MediaQuery.of(context).size.width / 2.7,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class InstagramBarcodeItem extends StatelessWidget {
+  const InstagramBarcodeItem({
+    Key? key,
+    required this.Instagram,
+  }) : super(key: key);
+
+  final String Instagram;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Text(
+          'Instagram',
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.purple,
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.purple,
+              width: 2,
+            ),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: QrImage(
+            data: 'https://www.instagram.com/' + Instagram,
+            size: MediaQuery.of(context).size.width / 2.7,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class TwiterBarcodeItem extends StatelessWidget {
+  const TwiterBarcodeItem({
+    Key? key,
+    required this.Twiter,
+  }) : super(key: key);
+
+  final String Twiter;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Text(
+          'Twiter',
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.lightBlueAccent,
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.lightBlueAccent,
+              width: 2,
+            ),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: QrImage(
+            data: 'https://twitter.com/' + Twiter,
+            size: MediaQuery.of(context).size.width / 2.7,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class LineBarcodeItem extends StatelessWidget {
+  const LineBarcodeItem({
+    Key? key,
+    required this.Line,
+  }) : super(key: key);
+
+  final String Line;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const Text(
+          'LINE',
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.green,
+          ),
+        ),
+        Container(
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: Colors.green,
+              width: 2,
+            ),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: QrImage(
+            data: Line,
+            size: MediaQuery.of(context).size.width / 2.7,
+          ),
+        ),
+      ],
     );
   }
 }
