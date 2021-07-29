@@ -15,8 +15,8 @@ abstract class HomeScreenState with _$HomeScreenState {
     @Default('') String InstagramID,
     @Default('') String FaceBookID,
   }) = _HomeScreenState;
-
 }
+
 class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMixin {
   HomeScreenController({
     required this.context,

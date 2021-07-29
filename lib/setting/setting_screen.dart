@@ -46,7 +46,6 @@ class SettingScreen extends StatelessWidget {
           body: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              // ignore: prefer_const_literals_to_create_immutables
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.all(15.0),
@@ -85,7 +84,6 @@ class SettingScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: TextField(
@@ -98,8 +96,6 @@ class SettingScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-
-
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
@@ -112,11 +108,9 @@ class SettingScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: TextField(
-                    // controller: _controller,
                     onChanged: (text3) {
                       context.read<SettingScreenController>().onChangeInstagram(text3);
                     },
@@ -138,8 +132,6 @@ class SettingScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                   ),
                 ),
-
-
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: TextField(

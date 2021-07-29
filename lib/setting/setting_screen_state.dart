@@ -13,8 +13,8 @@ abstract class SettingScreenState with _$SettingScreenState {
     @Default('') String InstagramID,
     @Default('') String FaceBookID,
   }) = _SettingScreenState;
-
 }
+
 class SettingScreenController extends StateNotifier<SettingScreenState> with LocatorMixin {
   SettingScreenController({
     required this.context,
@@ -56,28 +56,22 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
   }
 
   void onTapStore() {
-    //TODO ラインのURLを保存
     final line = state.LineID;
     sharePreference.setString(PreferenceKey.LineID, line);
 
-    //TODO TwiterのURLを保存
     final twiter = state.TwiterID;
     sharePreference.setString(PreferenceKey.TwiterID, twiter);
 
-    //TODO instagramのURLを保存
     final instagram = state.InstagramID;
     sharePreference.setString(PreferenceKey.InstagramID, instagram);
 
-    //TODO FaceBookのURLを保存
     final facebook = state.FaceBookID;
     sharePreference.setString(PreferenceKey.FaceBookID, facebook);
 
-    //TODO 前の画面に戻る
     Navigator.of(context).pop();
 
     //TODO 状態を反映させる
     initState();
-
   }
 
   void onTapBack() {

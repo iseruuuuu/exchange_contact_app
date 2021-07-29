@@ -1,12 +1,9 @@
 import 'package:exchange_contact_app/component/shared_preferences.dart';
-import 'package:ai_barcode/ai_barcode.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'home_screen_state.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-
-
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -16,8 +13,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
-  CreatorController? _creatorController;
 
   @override
   Widget build(BuildContext context) {
@@ -45,35 +40,35 @@ class _HomeState extends State<Home> {
               ),
             ),
           ),
-          body: Container(
+          body: SizedBox(
             width: double.infinity,
             child: GridView.count(
               crossAxisCount: 2,
               children: [
-                  Column(
-                    children: [
-                      const Text(
-                        'LINE',
-                        style: TextStyle(
-                          fontSize: 30,
+                Column(
+                  children: [
+                    const Text(
+                      'LINE',
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.green,
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
                           color: Colors.green,
+                          width: 2,
                         ),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                        Container(
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.green,
-                              width: 2,
-                            ),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                        child: QrImage(
-                          data: Line,
-                          size: MediaQuery.of(context).size.width / 2.5,
-                        ),
+                      child: QrImage(
+                        data: Line,
+                        size: MediaQuery.of(context).size.width / 2.5,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
+                ),
 
                 Column(
                   children: [
