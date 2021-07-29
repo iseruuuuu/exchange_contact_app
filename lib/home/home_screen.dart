@@ -99,7 +99,6 @@ class _HomeState extends State<Home> {
                     ),
                   ],
                 ),
-
                 Column(
                   children: [
                     const Text(
