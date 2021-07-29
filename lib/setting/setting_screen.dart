@@ -49,28 +49,16 @@ class SettingScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               // ignore: prefer_const_literals_to_create_immutables
               children: <Widget>[
-                const Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Text(
-                    'LINE',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.green,
-                    ),
-                  ),
-                ),
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
-                    Line,
+                    'LINE：' + Line,
                     style: const TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       color: Colors.green,
                     ),
                   ),
                 ),
-
-
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: TextField(
@@ -84,24 +72,13 @@ class SettingScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Text(
-                    'Twiter',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.lightBlueAccent,
-                    ),
-                  ),
-                ),
-
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
-                    Twiter,
+                    'Twiter：' + Twiter,
                     style: const TextStyle(
-                      fontSize: 20,
-                      color: Colors.green,
+                      fontSize: 18,
+                      color: Colors.lightBlueAccent,
                     ),
                   ),
                 ),
@@ -120,26 +97,17 @@ class SettingScreen extends StatelessWidget {
                 ),
 
 
-                const Padding(
-                  padding: EdgeInsets.all(15.0),
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
                   child: Text(
-                    'Instagram',
-                    style: TextStyle(
-                      fontSize: 20,
+                    'Instagram：' + Instagram,
+                    style: const TextStyle(
+                      fontSize: 18,
                       color: Colors.deepPurple,
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    Instagram,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      color: Colors.green,
-                    ),
-                  ),
-                ),
+
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
                   child: TextField(
@@ -153,26 +121,17 @@ class SettingScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(15.0),
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
                   child: Text(
-                    'Facebook',
-                    style: TextStyle(
-                      fontSize: 20,
+                    'Facebook：' + FaceBook,
+                    style: const TextStyle(
+                      fontSize: 18,
                       color: Colors.blue,
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    FaceBook,
-                    style: const TextStyle(
-                      fontSize: 20,
-                      color: Colors.green,
-                    ),
-                  ),
-                ),
+
 
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 30),
