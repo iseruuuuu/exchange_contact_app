@@ -12,10 +12,10 @@ TODOリスト
 ・画面のデザイン  
 ・保存をして画面に戻ったら、QRコードを反映させる。  
 
-・LINE  
+・LINE　URL完了  
 ・Twiter　URL完了  
 ・Instagram　URL完了  
-・Facebook  
+・Facebook　URL完了  
 
 
 TOBEリスト

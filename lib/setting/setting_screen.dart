@@ -17,7 +17,10 @@ class SettingScreen extends StatelessWidget {
         final Instagram = context.select<SettingScreenState, String>((state) => state.InstagramID);
         final FaceBook = context.select<SettingScreenState, String>((state) => state.FaceBookID);
         return Scaffold(
+          backgroundColor: Colors.white,
           appBar: AppBar(
+            elevation: 2,
+            backgroundColor: Colors.white,
             actions: [
               Padding(
                 padding: const EdgeInsets.only(right: 15),
@@ -27,30 +30,36 @@ class SettingScreen extends StatelessWidget {
                     '保存',
                     style: TextStyle(
                       fontSize: 20,
-                      color: Colors.white,
+                      color: Colors.blueAccent,
                     ),
                   ),
                 ),
               ),
             ],
-            leading: Container(
-              alignment: FractionalOffset.centerLeft,
-              child: IconButton(
-                onPressed: () => context.read<SettingScreenController>().onTapBack(),
-                icon: const Icon(
-                  Icons.arrow_back,
+            leading: Padding(
+              padding: const EdgeInsets.only(left: 15),
+              child: Container(
+                alignment: FractionalOffset.centerLeft,
+                child: IconButton(
+                  onPressed: () => context.read<SettingScreenController>().onTapBack(),
+                  icon: const Icon(
+                    Icons.arrow_back,
+                    color: Colors.blueAccent,
+                    size: 30,
+                  ),
                 ),
               ),
             ),
           ),
           body: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
                     'LINE\n'
+                        '\n'
                         + Line,
                     style: const TextStyle(
                       fontSize: 18,
@@ -76,6 +85,7 @@ class SettingScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
                     'Twiter\n'
+                        '\n'
                         + Twiter,
                     style: const TextStyle(
                       fontSize: 18,
@@ -100,6 +110,7 @@ class SettingScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
                     'Instagram\n'
+                        '\n'
                         '' + Instagram,
                     style: const TextStyle(
                       fontSize: 18,
@@ -124,6 +135,7 @@ class SettingScreen extends StatelessWidget {
                   padding: const EdgeInsets.all(15.0),
                   child: Text(
                     'Facebook\n'
+                        '\n'
                         + FaceBook,
                     style: const TextStyle(
                       fontSize: 18,
