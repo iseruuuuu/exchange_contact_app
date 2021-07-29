@@ -89,14 +89,26 @@ class SettingScreen extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.all(15.0),
-          child: Text(
-            'Twiter\n'
-                + Twiter,
-            style: const TextStyle(
-              fontSize: 18,
-              color: Colors.lightBlueAccent,
-            ),
-            textAlign: TextAlign.center,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+             Text(''),
+              Text(
+                'Twiter\n'
+                    + Twiter,
+                style: const TextStyle(
+                  fontSize: 18,
+                  color: Colors.lightBlueAccent,
+                ),
+                textAlign: TextAlign.center,
+              ),
+              IconButton(
+                onPressed: () => context.read<SettingScreenController>().onTapTwiterTutorial(),
+                icon: const Icon(
+                    Icons.contact_support_rounded,
+                ),
+              )
+            ],
           ),
         ),
         Padding(

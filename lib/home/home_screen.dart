@@ -46,11 +46,10 @@ class _HomeState extends State<Home> {
               IconButton(
                 onPressed: () => context.read<HomeScreenController>().onTapTutorial(),
                 icon: const Icon(
-                  Icons.warning_amber_outlined,
+                  Icons.contact_support_rounded,
                   color: Colors.blueAccent,
-                  size: 30,
+                  size: 40,
                 ),
-
               ),
             ],
           ),
