@@ -20,18 +20,18 @@ class TutorialScreen extends StatelessWidget {
   final pages = [
     PageModel(
       color: const Color(0xFF95cedd),
-      //TODO 後で作る。
       imageAssetPath: 'assets/2.png',
       title: '簡単に連絡先を交換！',
-      body: 'あらかじめアドレスを登録することで、登録してもらうためのQRコードを発行されます。',
+      body: 'あらかじめアドレスを登録することで、\n'
+          '登録のためのQRコードを発行されます。',
       doAnimateImage: true,
     ),
     PageModel(
       color: Colors.blueAccent,
       imageAssetPath: 'assets/1.png',
       title: '自分の連絡先の渡し方',
-      body: 'カメラorこのアプリを開いてもらってください。\n'
-          'そして、あなたのQRコードをカメラで読み込ませてください。',
+      body: 'カメラを開いてもらってください。\n'
+          'QRコードを読み込ませてください。',
       doAnimateImage: true,
     ),
     PageModel(
