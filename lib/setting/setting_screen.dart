@@ -52,111 +52,114 @@ class SettingScreen extends StatelessWidget {
             ),
           ),
           body: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    'LINE\n'
-                        + Line,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      color: Colors.green,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: TextField(
-                    // controller: _controller,
-                    onChanged: (text) {
-                      context.read<SettingScreenController>().onChangeLine(text);
-                    },
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'URL',
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    'Twiter\n'
-                        + Twiter,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      color: Colors.lightBlueAccent,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: TextField(
-                    onChanged: (text2) {
-                      context.read<SettingScreenController>().onChangeTwiter('@' + text2);
-                    },
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'URL',
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    'Instagram\n'
-                        '' + Instagram,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      color: Colors.deepPurple,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: TextField(
-                    onChanged: (text3) {
-                      context.read<SettingScreenController>().onChangeInstagram(text3);
-                    },
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'URL',
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Text(
-                    'Facebook\n'
-                        + FaceBook,
-                    style: const TextStyle(
-                      fontSize: 18,
-                      color: Colors.blue,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 30),
-                  child: TextField(
-                    onChanged: (text4) {
-                      context.read<SettingScreenController>().onChangeFaceBook(text4);
-                    },
-                    decoration: const InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'URL',
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            child: KeyboardItem(Line, context, Twiter, Instagram, FaceBook),
           ),
         );
       },
+    );
+  }
+
+  Column KeyboardItem(String Line, BuildContext context, String Twiter, String Instagram, String FaceBook) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Text(
+            'LINE\n'
+                + Line,
+            style: const TextStyle(
+              fontSize: 18,
+              color: Colors.green,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: TextField(
+            onChanged: (text) {
+              context.read<SettingScreenController>().onChangeLine(text);
+            },
+            decoration: const InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'URL',
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Text(
+            'Twiter\n'
+                + Twiter,
+            style: const TextStyle(
+              fontSize: 18,
+              color: Colors.lightBlueAccent,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: TextField(
+            onChanged: (text2) {
+              context.read<SettingScreenController>().onChangeTwiter('@' + text2);
+            },
+            decoration: const InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'TwiterID',
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Text(
+            'Instagram\n'
+                '' + Instagram,
+            style: const TextStyle(
+              fontSize: 18,
+              color: Colors.deepPurple,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: TextField(
+            onChanged: (text3) {
+              context.read<SettingScreenController>().onChangeInstagram(text3);
+            },
+            decoration: const InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'InstagramID',
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Text(
+            'Facebook\n'
+                + FaceBook,
+            style: const TextStyle(
+              fontSize: 18,
+              color: Colors.blue,
+            ),
+            textAlign: TextAlign.center,
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: TextField(
+            onChanged: (text4) {
+              context.read<SettingScreenController>().onChangeFaceBook(text4);
+            },
+            decoration: const InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'URL',
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
