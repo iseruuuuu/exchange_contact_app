@@ -7,6 +7,7 @@ enum PreferenceKey {
   TwiterID,
   InstagramID,
   FaceBookID,
+  TUTORIAL_DONE,
 }
 
 class SharePreference {
@@ -22,4 +23,9 @@ class SharePreference {
     final pref = await preference;
     await pref.setString(EnumToString.convertToString(key), value);
   }
+
+  Future<void> getBool(PreferenceKey key, bool value) async {
+  final pref = await preference;
+  await pref.setBool(EnumToString.convertToString(key), value);
+}
 }

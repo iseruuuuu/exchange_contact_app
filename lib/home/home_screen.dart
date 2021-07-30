@@ -29,6 +29,8 @@ class _HomeState extends State<Home> {
         final Twiter = context.select<HomeScreenState, String>((state) => state.TwiterID);
         final Instagram = context.select<HomeScreenState, String>((state) => state.InstagramID);
         final Facebook = context.select<HomeScreenState, String>((state) => state.FaceBookID);
+
+        WidgetsBinding.instance!.addPostFrameCallback((_) => context.read<HomeScreenController>().showTutorial());
         return Scaffold(
           backgroundColor: Colors.white,
           appBar: PreferredSize(

@@ -1,3 +1,4 @@
+import 'package:exchange_contact_app/tutorial/tutorial_screen.dart';
 import 'package:flutter/material.dart';
 import 'home/home_screen.dart';
 
@@ -12,6 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      /*
+      initialRoute: '/',
+      routes: <String, WidgetBuilder>{
+        '/' : (BuildContext context) => RootView(),
+        '/tutorial':  (context) =>  TutorialScreen(),
+      },
+       */
       title: '',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),

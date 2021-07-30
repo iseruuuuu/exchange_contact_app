@@ -74,10 +74,21 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => TutorialScreen(),
-        fullscreenDialog: true
+          builder: (context) => TutorialScreen(),
+          fullscreenDialog: true
       ),
     );
   }
 
+  void showTutorial() async {
+    //final preference = await SharedPreferences.getInstance();
+    // 最初の起動ならチュートリアル表示
+    //  if (sharePreference.getBool(PreferenceKey.TUTORIAL_DONE) != true) {
+    // if (sharePreference.getBool(PreferenceKey.TUTORIAL_DONE).then((bool) {
+    // sharePreference.getBool(PreferenceKey.TUTORIAL_DONE).then((FaceBookID) {
+    // ルート遷移
+    // ※まだProviderは使えないのでここでやる
+    //  Navigator.of(context).pushNamed('/tutorial');
+    //  }
+  }
 }
