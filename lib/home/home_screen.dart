@@ -31,27 +31,30 @@ class _HomeState extends State<Home> {
         final Facebook = context.select<HomeScreenState, String>((state) => state.FaceBookID);
         return Scaffold(
           backgroundColor: Colors.white,
-          appBar: AppBar(
-            elevation: 2,
-            backgroundColor: Colors.white,
-            leading: IconButton(
-              onPressed: () => context.read<HomeScreenController>().onTapSetting(),
-              icon: const Icon(
-                Icons.account_circle,
-                color: Colors.blueAccent,
-                size: 45,
-              ),
-            ),
-            actions: [
-              IconButton(
-                onPressed: () => context.read<HomeScreenController>().onTapTutorial(),
+          appBar: PreferredSize(
+            preferredSize: const Size.fromHeight(50.0),
+            child: AppBar(
+              elevation: 2,
+              backgroundColor: Colors.white,
+              leading: IconButton(
+                onPressed: () => context.read<HomeScreenController>().onTapSetting(),
                 icon: const Icon(
-                  Icons.contact_support_rounded,
+                  Icons.account_circle,
                   color: Colors.blueAccent,
-                  size: 40,
+                  size: 45,
                 ),
               ),
-            ],
+              actions: [
+                IconButton(
+                  onPressed: () => context.read<HomeScreenController>().onTapTutorial(),
+                  icon: const Icon(
+                    Icons.contact_support_rounded,
+                    color: Colors.blueAccent,
+                    size: 40,
+                  ),
+                ),
+              ],
+            ),
           ),
           body: SizedBox(
             width: double.infinity,

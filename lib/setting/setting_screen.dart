@@ -18,34 +18,37 @@ class SettingScreen extends StatelessWidget {
         final FaceBook = context.select<SettingScreenState, String>((state) => state.FaceBookID);
         return Scaffold(
           backgroundColor: Colors.white,
-          appBar: AppBar(
-            elevation: 2,
-            backgroundColor: Colors.white,
-            actions: [
-              Padding(
-                padding: const EdgeInsets.only(right: 15),
-                child: TextButton(
-                  onPressed: () => context.read<SettingScreenController>().onTapStore(),
-                  child: const Text(
-                    '保存',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.blueAccent,
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(50.0),
+            child: AppBar(
+              elevation: 2,
+              backgroundColor: Colors.white,
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 15),
+                  child: TextButton(
+                    onPressed: () => context.read<SettingScreenController>().onTapStore(),
+                    child: const Text(
+                      '保存',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.blueAccent,
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
-            leading: Padding(
-              padding: const EdgeInsets.only(left: 15),
-              child: Container(
-                alignment: FractionalOffset.centerLeft,
-                child: IconButton(
-                  onPressed: () => context.read<SettingScreenController>().onTapBack(),
-                  icon: const Icon(
-                    Icons.arrow_back,
-                    color: Colors.blueAccent,
-                    size: 30,
+              ],
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: Container(
+                  alignment: FractionalOffset.centerLeft,
+                  child: IconButton(
+                    onPressed: () => context.read<SettingScreenController>().onTapBack(),
+                    icon: const Icon(
+                      Icons.arrow_back,
+                      color: Colors.blueAccent,
+                      size: 30,
+                    ),
                   ),
                 ),
               ),
@@ -93,17 +96,14 @@ class SettingScreen extends StatelessWidget {
             child: const Text('LINEの登録方法')
         ),
 
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Text(
-            'Twiter\n'
-                + Twiter,
-            style: const TextStyle(
-              fontSize: 18,
-              color: Colors.lightBlueAccent,
-            ),
-            textAlign: TextAlign.center,
+        Text(
+          'Twiter\n'
+              + Twiter,
+          style: const TextStyle(
+            fontSize: 18,
+            color: Colors.lightBlueAccent,
           ),
+          textAlign: TextAlign.center,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -123,17 +123,14 @@ class SettingScreen extends StatelessWidget {
             child: const Text('Twiterの登録方法')
         ),
 
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Text(
-            'Instagram\n'
-                '' + Instagram,
-            style: const TextStyle(
-              fontSize: 18,
-              color: Colors.deepPurple,
-            ),
-            textAlign: TextAlign.center,
+        Text(
+          'Instagram\n'
+              '' + Instagram,
+          style: const TextStyle(
+            fontSize: 18,
+            color: Colors.deepPurple,
           ),
+          textAlign: TextAlign.center,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
@@ -150,20 +147,18 @@ class SettingScreen extends StatelessWidget {
 
         ElevatedButton(
             onPressed: () => context.read<SettingScreenController>().onTapInstagramTutorial(),
-            child: const Text('Instagramの登録方法')
+            child: Container(
+                child: const Text('Instagramの登録方法',))
         ),
 
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Text(
-            'Facebook\n'
-                + FaceBook,
-            style: const TextStyle(
-              fontSize: 18,
-              color: Colors.blue,
-            ),
-            textAlign: TextAlign.center,
+        Text(
+          'Facebook\n'
+              + FaceBook,
+          style: const TextStyle(
+            fontSize: 18,
+            color: Colors.blue,
           ),
+          textAlign: TextAlign.center,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
