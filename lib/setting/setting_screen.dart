@@ -87,28 +87,22 @@ class SettingScreen extends StatelessWidget {
             ),
           ),
         ),
+
+        ElevatedButton(
+            onPressed: () => context.read<SettingScreenController>().onTapLineTutorial(),
+            child: const Text('LINEの登録方法')
+        ),
+
         Padding(
           padding: const EdgeInsets.all(15.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-             Text(''),
-              Text(
-                'Twiter\n'
-                    + Twiter,
-                style: const TextStyle(
-                  fontSize: 18,
-                  color: Colors.lightBlueAccent,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              IconButton(
-                onPressed: () => context.read<SettingScreenController>().onTapTwiterTutorial(),
-                icon: const Icon(
-                    Icons.contact_support_rounded,
-                ),
-              )
-            ],
+          child: Text(
+            'Twiter\n'
+                + Twiter,
+            style: const TextStyle(
+              fontSize: 18,
+              color: Colors.lightBlueAccent,
+            ),
+            textAlign: TextAlign.center,
           ),
         ),
         Padding(
@@ -123,6 +117,12 @@ class SettingScreen extends StatelessWidget {
             ),
           ),
         ),
+
+        ElevatedButton(
+            onPressed: () => context.read<SettingScreenController>().onTapTwiterTutorial(),
+            child: const Text('Twiterの登録方法')
+        ),
+
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Text(
@@ -147,6 +147,12 @@ class SettingScreen extends StatelessWidget {
             ),
           ),
         ),
+
+        ElevatedButton(
+            onPressed: () => context.read<SettingScreenController>().onTapInstagramTutorial(),
+            child: const Text('Instagramの登録方法')
+        ),
+
         Padding(
           padding: const EdgeInsets.all(15.0),
           child: Text(
@@ -171,7 +177,14 @@ class SettingScreen extends StatelessWidget {
             ),
           ),
         ),
+
+        ElevatedButton(
+            onPressed: () => context.read<SettingScreenController>().onTapFaceBookTutorial(),
+            child: const Text('Facebookの登録方法')
+        ),
       ],
     );
   }
 }
+
+
