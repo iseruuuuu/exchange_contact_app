@@ -23,7 +23,7 @@ class TutorialScreen extends StatelessWidget {
     PageModel(
       color: const Color(0xFF95cedd),
       imageAssetPath: 'assets/2.png',
-      title: '簡単に連絡先を交換！',
+      title: '連絡先を交換可能！',
       body: 'あらかじめアドレスを登録することで、\n'
           '登録のためのQRコードを発行されます。',
       doAnimateImage: true,

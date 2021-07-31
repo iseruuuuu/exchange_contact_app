@@ -82,6 +82,7 @@ class SettingScreen extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: TextField(
+            keyboardType: TextInputType.url,
             onChanged: (text) {
               context.read<SettingScreenController>().onChangeLine(text);
             },
@@ -107,6 +108,7 @@ class SettingScreen extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: TextField(
+            keyboardType: TextInputType.emailAddress,
             onChanged: (text2) {
               context.read<SettingScreenController>().onChangeTwiter('@' + text2);
             },
@@ -132,6 +134,7 @@ class SettingScreen extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: TextField(
+            keyboardType: TextInputType.emailAddress,
             onChanged: (text3) {
               context.read<SettingScreenController>().onChangeInstagram(text3);
             },
@@ -158,6 +161,7 @@ class SettingScreen extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: TextField(
+            keyboardType: TextInputType.url,
             onChanged: (text4) {
               context.read<SettingScreenController>().onChangeFaceBook(text4);
             },
