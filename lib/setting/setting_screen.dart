@@ -23,10 +23,20 @@ class SettingScreen extends StatelessWidget {
             child: AppBar(
               elevation: 2,
               backgroundColor: Colors.white,
-              actions: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 15),
-                  child: TextButton(
+              title: Row(
+                children: [
+                  TextButton(
+                    onPressed: () => context.read<SettingScreenController>().onTapBack(),
+                    child: const Text(
+                      '戻る',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.blueAccent,
+                      ),
+                    ),
+                  ),
+                  const Spacer(),
+                  TextButton(
                     onPressed: () => context.read<SettingScreenController>().onTapStore(),
                     child: const Text(
                       '保存',
@@ -36,22 +46,9 @@ class SettingScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                ),
-              ],
-              leading: Padding(
-                padding: const EdgeInsets.only(left: 15),
-                child: Container(
-                  alignment: FractionalOffset.centerLeft,
-                  child: IconButton(
-                    onPressed: () => context.read<SettingScreenController>().onTapBack(),
-                    icon: const Icon(
-                      Icons.arrow_back,
-                      color: Colors.blueAccent,
-                      size: 30,
-                    ),
-                  ),
-                ),
+                ],
               ),
+              automaticallyImplyLeading: false,
             ),
           ),
           body: SingleChildScrollView(
