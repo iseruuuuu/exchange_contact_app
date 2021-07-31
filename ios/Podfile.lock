@@ -4,12 +4,15 @@ PODS:
     - MTBBarcodeScanner
   - Flutter (1.0.0)
   - MTBBarcodeScanner (5.0.11)
+  - native_shared_preferences (1.0.0):
+    - Flutter
   - shared_preferences (0.0.1):
     - Flutter
 
 DEPENDENCIES:
   - ai_barcode (from `.symlinks/plugins/ai_barcode/ios`)
   - Flutter (from `Flutter`)
+  - native_shared_preferences (from `.symlinks/plugins/native_shared_preferences/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
 
 SPEC REPOS:
@@ -21,6 +24,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/ai_barcode/ios"
   Flutter:
     :path: Flutter
+  native_shared_preferences:
+    :path: ".symlinks/plugins/native_shared_preferences/ios"
   shared_preferences:
     :path: ".symlinks/plugins/shared_preferences/ios"
 
@@ -28,6 +33,7 @@ SPEC CHECKSUMS:
   ai_barcode: 67fb0a7b732dbb87e92b59bb90a438db9383fa2f
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
   MTBBarcodeScanner: f453b33c4b7dfe545d8c6484ed744d55671788cb
+  native_shared_preferences: 21a805f6149643c25a20a4f534692131faebadfe
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
 
 PODFILE CHECKSUM: 9870e73170ab1a73882b25c256aa7840d7c06722

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
-import '../shared_preferences.dart';
+import '../local/shared_preferences.dart';
 import 'keybord_item_state.dart';
 
 class KeybordItem extends StatelessWidget {

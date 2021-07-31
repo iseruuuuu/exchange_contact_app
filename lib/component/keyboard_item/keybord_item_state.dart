@@ -3,7 +3,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:state_notifier/state_notifier.dart';
 
-import '../shared_preferences.dart';
+import '../local/shared_preferences.dart';
 
 part 'keybord_item_state.freezed.dart';
 

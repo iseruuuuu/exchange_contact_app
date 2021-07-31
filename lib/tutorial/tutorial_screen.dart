@@ -1,3 +1,4 @@
+import 'package:exchange_contact_app/component/local/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_overboard/flutter_overboard.dart';
 
@@ -11,12 +12,13 @@ class TutorialScreen extends StatelessWidget {
         skipCallback: () {
           Navigator.pop(context);
         },
-        finishCallback: () {
+        finishCallback: () async{
           Navigator.pop(context);
         },
       ),
     );
   }
+
   final pages = [
     PageModel(
       color: const Color(0xFF95cedd),

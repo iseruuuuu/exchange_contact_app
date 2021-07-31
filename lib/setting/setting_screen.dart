@@ -1,4 +1,4 @@
-import 'package:exchange_contact_app/component/shared_preferences.dart';
+import 'package:exchange_contact_app/component/local/shared_preferences.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'setting_screen_state.dart';
@@ -19,7 +19,7 @@ class SettingScreen extends StatelessWidget {
         return Scaffold(
           backgroundColor: Colors.white,
           appBar: PreferredSize(
-            preferredSize: Size.fromHeight(50.0),
+            preferredSize: const Size.fromHeight(50.0),
             child: AppBar(
               elevation: 2,
               backgroundColor: Colors.white,
@@ -62,6 +62,7 @@ class SettingScreen extends StatelessWidget {
     );
   }
 
+  // ignore: non_constant_identifier_names
   Column KeyboardItem(String Line, BuildContext context, String Twiter, String Instagram, String FaceBook) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -90,12 +91,10 @@ class SettingScreen extends StatelessWidget {
             ),
           ),
         ),
-
         ElevatedButton(
             onPressed: () => context.read<SettingScreenController>().onTapLineTutorial(),
             child: const Text('LINEの登録方法')
         ),
-
         Text(
           'Twiter\n'
               + Twiter,
@@ -117,12 +116,10 @@ class SettingScreen extends StatelessWidget {
             ),
           ),
         ),
-
         ElevatedButton(
             onPressed: () => context.read<SettingScreenController>().onTapTwiterTutorial(),
             child: const Text('Twiterの登録方法')
         ),
-
         Text(
           'Instagram\n'
               '' + Instagram,
@@ -144,13 +141,11 @@ class SettingScreen extends StatelessWidget {
             ),
           ),
         ),
-
         ElevatedButton(
             onPressed: () => context.read<SettingScreenController>().onTapInstagramTutorial(),
             child: Container(
                 child: const Text('Instagramの登録方法',))
         ),
-
         Text(
           'Facebook\n'
               + FaceBook,
@@ -172,7 +167,6 @@ class SettingScreen extends StatelessWidget {
             ),
           ),
         ),
-
         ElevatedButton(
             onPressed: () => context.read<SettingScreenController>().onTapFaceBookTutorial(),
             child: const Text('Facebookの登録方法')

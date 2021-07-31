@@ -1,4 +1,4 @@
-import 'package:exchange_contact_app/component/shared_preferences.dart';
+import 'package:exchange_contact_app/component/local/shared_preferences.dart';
 import 'package:exchange_contact_app/tutorial/facebook_tutorial_screen.dart';
 import 'package:exchange_contact_app/tutorial/instagram_tutorial_screen.dart';
 import 'package:exchange_contact_app/tutorial/line_tutorial_screen.dart';

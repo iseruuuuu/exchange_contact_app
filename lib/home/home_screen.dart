@@ -1,8 +1,8 @@
-import 'package:exchange_contact_app/component/FaceBook/facebook_item.dart';
-import 'package:exchange_contact_app/component/Instagram/instagram_item.dart';
-import 'package:exchange_contact_app/component/LINE/line_item.dart';
-import 'package:exchange_contact_app/component/Twiter/twiter_item.dart';
-import 'package:exchange_contact_app/component/shared_preferences.dart';
+import 'package:exchange_contact_app/component/barcode_item/facebook_item.dart';
+import 'package:exchange_contact_app/component/barcode_item/instagram_item.dart';
+import 'package:exchange_contact_app/component/barcode_item/line_item.dart';
+import 'package:exchange_contact_app/component/barcode_item/twiter_item.dart';
+import 'package:exchange_contact_app/component/local/shared_preferences.dart';
 import 'package:flutter_state_notifier/flutter_state_notifier.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -29,8 +29,7 @@ class _HomeState extends State<Home> {
         final Twiter = context.select<HomeScreenState, String>((state) => state.TwiterID);
         final Instagram = context.select<HomeScreenState, String>((state) => state.InstagramID);
         final Facebook = context.select<HomeScreenState, String>((state) => state.FaceBookID);
-
-        WidgetsBinding.instance!.addPostFrameCallback((_) => context.read<HomeScreenController>().showTutorial());
+       // WidgetsBinding.instance!.addPostFrameCallback((_) => context.read<HomeScreenController>().showTutorial());
         return Scaffold(
           backgroundColor: Colors.white,
           appBar: PreferredSize(

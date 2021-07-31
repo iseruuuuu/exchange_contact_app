@@ -51,6 +51,8 @@ dev_dependencies:
   state_notifier:
   build_runner:
 
+ #SharePreference
+  native_shared_preferences:
   shared_preferences:
   enum_to_string:
 

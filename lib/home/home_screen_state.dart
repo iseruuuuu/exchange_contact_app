@@ -1,10 +1,11 @@
+import 'package:exchange_contact_app/component/local/preference.dart';
 import 'package:exchange_contact_app/tutorial/tutorial_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:state_notifier/state_notifier.dart';
 import 'package:exchange_contact_app/setting/setting_screen.dart';
-import 'package:exchange_contact_app/component/shared_preferences.dart';
+import 'package:exchange_contact_app/component/local/shared_preferences.dart';
 
 part 'home_screen_state.freezed.dart';
 
@@ -30,6 +31,8 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
   @override
   void initState() {
     super.initState();
+
+    showTutorial();
     sharePreference.getString(PreferenceKey.LineID).then((lineID) {
       if (lineID.isEmpty) return;
       state = state.copyWith(
@@ -74,21 +77,17 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => TutorialScreen(),
-          fullscreenDialog: true
+        builder: (context) => TutorialScreen(),
+        fullscreenDialog: true,
       ),
     );
   }
 
   void showTutorial() async {
-    //final preference = await SharedPreferences.getInstance();
     // 最初の起動ならチュートリアル表示
-    //  if (sharePreference.getBool(PreferenceKey.TUTORIAL_DONE) != true) {
-    // if (sharePreference.getBool(PreferenceKey.TUTORIAL_DONE).then((bool) {
-    // sharePreference.getBool(PreferenceKey.TUTORIAL_DONE).then((FaceBookID) {
-    // ルート遷移
-    // ※まだProviderは使えないのでここでやる
-    //  Navigator.of(context).pushNamed('/tutorial');
-    //  }
+    if (await Preference.tutorialDone.getBool() ?? false) return;
+    await Preference.tutorialDone.setBool(true);
+    await Navigator.of(context).pushNamed('/tutorial');
   }
+
 }
