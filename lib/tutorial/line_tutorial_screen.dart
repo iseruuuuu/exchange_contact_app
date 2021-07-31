@@ -20,8 +20,8 @@ class LineTutorialScreen extends StatelessWidget {
   final pages = [
     PageModel(
       color: const Color(0xFF95cedd),
-      //TODO 後で作る。
-      imageAssetPath: 'assets/2.png',
+      //TODO もう少し大きくした方がいいかも！！
+      imageAssetPath: 'assets/11.jpg',
       title: 'URLの取得方法①',
       body: 'LINEのホームの追加画面から\n'
           '「QRコード」を選択します。',
@@ -29,7 +29,7 @@ class LineTutorialScreen extends StatelessWidget {
     ),
     PageModel(
       color: Colors.blueAccent,
-      imageAssetPath: 'assets/1.png',
+      imageAssetPath: 'assets/12.jpg',
       title: 'URLの取得方法②',
       body: 'QRコードを読み込む画面から\n'
           '「マイQRコード」を押します。\n'
@@ -39,7 +39,8 @@ class LineTutorialScreen extends StatelessWidget {
     ),
     PageModel(
       color: Colors.green,
-      imageAssetPath: 'assets/1.png',
+      //TODO もう少し大きくした方がいいかも！！
+      imageAssetPath: 'assets/13.jpg',
       title: 'URLの取得方法③',
       body: '「他のアプリ」を押してください\n'
           '「コピー」を押してください',
@@ -48,7 +49,8 @@ class LineTutorialScreen extends StatelessWidget {
 
     PageModel(
       color: Colors.green,
-      imageAssetPath: 'assets/1.png',
+      //TODO もう少し大きくした方がいいかも！！
+      imageAssetPath: 'assets/1.jpg',
       title: 'URLの取得方法④',
       body: 'メモ帳などを開いてください。\n'
           'URLを貼り付けてください。',
