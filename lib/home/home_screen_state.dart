@@ -33,6 +33,10 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
     super.initState();
 
     showTutorial();
+    preference();
+  }
+
+  void preference() {
     sharePreference.getString(PreferenceKey.LineID).then((lineID) {
       if (lineID.isEmpty) return;
       state = state.copyWith(
@@ -60,7 +64,6 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
         FaceBookID: FaceBookID,
       );
     });
-
   }
 
   void onTapSetting() {
@@ -84,7 +87,6 @@ class HomeScreenController extends StateNotifier<HomeScreenState> with LocatorMi
   }
 
   void showTutorial() async {
-    // 最初の起動ならチュートリアル表示
     if (await Preference.tutorialDone.getBool() ?? false) return;
     await Preference.tutorialDone.setBool(true);
     await Navigator.of(context).pushNamed('/tutorial');

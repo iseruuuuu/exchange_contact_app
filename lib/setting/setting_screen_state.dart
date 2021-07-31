@@ -31,34 +31,40 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
 
   @override
   void initState() {
-    sharePreference.getString(PreferenceKey.LineID).then((lineID) {
-      if (lineID.isEmpty) return;
-      state = state.copyWith(
-        LineID: lineID,
-      );
-    });
+    super.initState();
 
-    sharePreference.getString(PreferenceKey.TwiterID).then((TwiterID) {
-      if (TwiterID.isEmpty) return;
-      state = state.copyWith(
-        TwiterID: TwiterID,
-      );
-    });
-
-    sharePreference.getString(PreferenceKey.InstagramID).then((InstagramID) {
-      if (InstagramID.isEmpty) return;
-      state = state.copyWith(
-        InstagramID: InstagramID,
-      );
-    });
-
-    sharePreference.getString(PreferenceKey.FaceBookID).then((FaceBookID) {
-      if (FaceBookID.isEmpty) return;
-      state = state.copyWith(
-        FaceBookID: FaceBookID,
-      );
-    });
+    preference();
   }
+
+   void preference() {
+     sharePreference.getString(PreferenceKey.LineID).then((lineID) {
+       if (lineID.isEmpty) return;
+       state = state.copyWith(
+         LineID: lineID,
+       );
+     });
+
+     sharePreference.getString(PreferenceKey.TwiterID).then((TwiterID) {
+       if (TwiterID.isEmpty) return;
+       state = state.copyWith(
+         TwiterID: TwiterID,
+       );
+     });
+
+     sharePreference.getString(PreferenceKey.InstagramID).then((InstagramID) {
+       if (InstagramID.isEmpty) return;
+       state = state.copyWith(
+         InstagramID: InstagramID,
+       );
+     });
+
+     sharePreference.getString(PreferenceKey.FaceBookID).then((FaceBookID) {
+       if (FaceBookID.isEmpty) return;
+       state = state.copyWith(
+         FaceBookID: FaceBookID,
+       );
+     });
+   }
 
   void onTapStore() {
     final line = state.LineID;
@@ -74,14 +80,6 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
     sharePreference.setString(PreferenceKey.FaceBookID, facebook);
 
     Navigator.of(context).pop();
-
-    //TODO 状態を反映させる
-    initState();
-
-    print(line);
-    print(twiter);
-    print(instagram);
-    print(facebook);
   }
 
   void onTapBack() {
@@ -108,86 +106,6 @@ class SettingScreenController extends StateNotifier<SettingScreenState> with Loc
   void onChangeFaceBook(String text) {
     state = state.copyWith(
       FaceBookID: text,
-    );
-  }
-
-
-  void onTapDialog() {
-    showDialog(
-      context: context,
-      builder: (_) {
-        return SimpleDialog(
-          title: Column(
-            children: const[
-              Text(
-                '気に入ったら応援してね♡',
-                style: TextStyle(
-                  color: Colors.red,
-                  fontSize: 16,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 25),
-              Text(
-                'みんなの応援で',
-                style: TextStyle(
-                    fontSize: 13,
-                    fontStyle: FontStyle.normal
-                ),
-              ),
-              Text(
-                'アプリがもっと進化するかも！',
-                style: TextStyle(
-                    fontSize: 13,
-                    fontStyle: FontStyle.normal
-                ),
-              ),
-              SizedBox(height: 25),
-            ],
-          ),
-          contentPadding: const EdgeInsets.symmetric(
-              vertical: 10, horizontal: 15),
-          children: [
-            TextButton(
-              style: TextButton.styleFrom(
-                backgroundColor: Colors.red,
-                padding: const EdgeInsets.symmetric(
-                  vertical: 8,
-                  horizontal: 24,
-                ),
-              ),
-              child: const Text(
-                '★★★★★で応援',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              onPressed: () {
-
-              },
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 8,
-                  horizontal: 24,
-                ),
-              ),
-              child: const Text(
-                '今はしない',
-                style: TextStyle(
-                  color: Colors.grey,
-                ),
-              ),
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
     );
   }
 

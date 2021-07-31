@@ -30,43 +30,46 @@ class _HomeState extends State<Home> {
         final Instagram = context.select<HomeScreenState, String>((state) => state.InstagramID);
         final Facebook = context.select<HomeScreenState, String>((state) => state.FaceBookID);
        // WidgetsBinding.instance!.addPostFrameCallback((_) => context.read<HomeScreenController>().showTutorial());
-        return Scaffold(
-          backgroundColor: Colors.white,
-          appBar: PreferredSize(
-            preferredSize: const Size.fromHeight(50.0),
-            child: AppBar(
-              elevation: 2,
-              backgroundColor: Colors.white,
-              leading: IconButton(
-                onPressed: () => context.read<HomeScreenController>().onTapSetting(),
-                icon: const Icon(
-                  Icons.account_circle,
-                  color: Colors.blueAccent,
-                  size: 45,
-                ),
-              ),
-              actions: [
-                IconButton(
-                  onPressed: () => context.read<HomeScreenController>().onTapTutorial(),
+        return GestureDetector(
+          onTap: () => context.read<HomeScreenController>().initState(),
+          child: Scaffold(
+            backgroundColor: Colors.white,
+            appBar: PreferredSize(
+              preferredSize: const Size.fromHeight(50.0),
+              child: AppBar(
+                elevation: 2,
+                backgroundColor: Colors.white,
+                leading: IconButton(
+                  onPressed: () => context.read<HomeScreenController>().onTapSetting(),
                   icon: const Icon(
-                    Icons.contact_support_rounded,
+                    Icons.account_circle,
                     color: Colors.blueAccent,
-                    size: 40,
+                    size: 45,
                   ),
                 ),
-              ],
+                actions: [
+                  IconButton(
+                    onPressed: () => context.read<HomeScreenController>().onTapTutorial(),
+                    icon: const Icon(
+                      Icons.contact_support_rounded,
+                      color: Colors.blueAccent,
+                      size: 40,
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-          body: SizedBox(
-            width: double.infinity,
-            child: GridView.count(
-              crossAxisCount: 2,
-              children: [
-                LineBarcodeItem(Line: Line),
-                TwiterBarcodeItem(Twiter: Twiter),
-                InstagramBarcodeItem(Instagram: Instagram),
-                FacebookBarcodeItem(Facebook: Facebook),
-              ],
+            body: SizedBox(
+              width: double.infinity,
+              child: GridView.count(
+                crossAxisCount: 2,
+                children: [
+                  LineBarcodeItem(Line: Line),
+                  TwiterBarcodeItem(Twiter: Twiter),
+                  InstagramBarcodeItem(Instagram: Instagram),
+                  FacebookBarcodeItem(Facebook: Facebook),
+                ],
+              ),
             ),
           ),
         );

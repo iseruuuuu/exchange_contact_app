@@ -2,7 +2,7 @@ import 'package:native_shared_preferences/native_shared_preferences.dart';
 import 'package:enum_to_string/enum_to_string.dart';
 
 enum Preference {
-  //TODO　後で追加する。
+  //TODO後で追加する。
   LineID,
   TwiterID,
   InstagramID,
@@ -29,8 +29,6 @@ enum Preference {
     }
     return preference.getString(keyString) ?? defaultValue;
   }
-
-
 
   Future<bool> setBool(bool value) async {
     final preference = await NativeSharedPreferences.getInstance();
