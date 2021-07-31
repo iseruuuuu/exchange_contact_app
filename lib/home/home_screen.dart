@@ -34,21 +34,24 @@ class _HomeState extends State<Home> {
           onTap: () => context.read<HomeScreenController>().initState(),
           child: Scaffold(
             backgroundColor: Colors.white,
-            appBar: PreferredSize(
-              preferredSize: const Size.fromHeight(50.0),
-              child: AppBar(
-                elevation: 2,
-                backgroundColor: Colors.white,
-                leading: IconButton(
+            appBar: AppBar(
+              elevation: 3,
+              backgroundColor: Colors.white,
+              leading: Padding(
+                padding: const EdgeInsets.only(left: 15),
+                child: IconButton(
                   onPressed: () => context.read<HomeScreenController>().onTapSetting(),
                   icon: const Icon(
                     Icons.account_circle,
                     color: Colors.blueAccent,
-                    size: 45,
+                    size: 40,
                   ),
                 ),
-                actions: [
-                  IconButton(
+              ),
+              actions: [
+                Padding(
+                  padding: const EdgeInsets.only(right: 15),
+                  child: IconButton(
                     onPressed: () => context.read<HomeScreenController>().onTapTutorial(),
                     icon: const Icon(
                       Icons.contact_support_rounded,
@@ -56,20 +59,26 @@ class _HomeState extends State<Home> {
                       size: 40,
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            body: SizedBox(
-              width: double.infinity,
-              child: GridView.count(
-                crossAxisCount: 2,
-                children: [
-                  LineBarcodeItem(Line: Line),
-                  TwiterBarcodeItem(Twiter: Twiter),
-                  InstagramBarcodeItem(Instagram: Instagram),
-                  FacebookBarcodeItem(Facebook: Facebook),
-                ],
-              ),
+            body: Column(
+              children: [
+
+                Container(height: 50),
+
+                Expanded(
+                  child: GridView.count(
+                    crossAxisCount: 2,
+                    children: [
+                      LineBarcodeItem(Line: Line),
+                      TwiterBarcodeItem(Twiter: Twiter),
+                      InstagramBarcodeItem(Instagram: Instagram),
+                      FacebookBarcodeItem(Facebook: Facebook),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         );
