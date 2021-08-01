@@ -52,14 +52,16 @@ class SettingScreen extends StatelessWidget {
             ),
           ),
           body: SingleChildScrollView(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                LINEKeyboard(Line: Line),
-                TwiterKeyboard(Twiter: Twiter),
-                InstagramKeyboard(Instagram: Instagram),
-                FaceBookKeyboard(FaceBook: FaceBook),
-              ],
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  LINEKeyboard(Line: Line),
+                  TwiterKeyboard(Twiter: Twiter),
+                  InstagramKeyboard(Instagram: Instagram),
+                  FaceBookKeyboard(FaceBook: FaceBook),
+                ],
+              ),
             ),
           ),
         );
@@ -78,35 +80,46 @@ class LINEKeyboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          'LINE\n'
-              + Line,
-          style: const TextStyle(
-            fontSize: 20,
-            color: Colors.green,
-          ),
-          textAlign: TextAlign.center,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 30),
+      child: Container(
+        padding: const EdgeInsets.all(5.0),
+        width: MediaQuery.of(context).size.width / 1.1 ,
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey),
+          borderRadius: BorderRadius.circular(10),
         ),
-        TextField(
-          keyboardType: TextInputType.url,
-          onChanged: (text) {
-            context.read<SettingScreenController>().onChangeLine(text);
-          },
-          decoration: const InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'URL',
-          ),
+        child: Column(
+          children: [
+            Text(
+              'LINE\n'
+                  + Line,
+              style: const TextStyle(
+                fontSize: 20,
+                color: Colors.green,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            TextField(
+              keyboardType: TextInputType.url,
+              onChanged: (text) {
+                context.read<SettingScreenController>().onChangeLine(text);
+              },
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'URL',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () => context.read<SettingScreenController>().onTapLineTutorial(),
+              child: const Text('LINEの登録方法'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.green,
+              ),
+            ),
+          ],
         ),
-        ElevatedButton(
-          onPressed: () => context.read<SettingScreenController>().onTapLineTutorial(),
-          child: const Text('LINEの登録方法'),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.green,
-          ),
-        ),
-      ],
+      ),
     );
   }
 }
@@ -121,35 +134,46 @@ class TwiterKeyboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          'Twiter\n'
-              + Twiter,
-          style: const TextStyle(
-            fontSize: 20,
-            color: Colors.lightBlueAccent,
-          ),
-          textAlign: TextAlign.center,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 30),
+      child: Container(
+        padding: const EdgeInsets.all(5.0),
+        width: MediaQuery.of(context).size.width / 1.1 ,
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey),
+          borderRadius: BorderRadius.circular(10),
         ),
-        TextField(
-          keyboardType: TextInputType.emailAddress,
-          onChanged: (text2) {
-            context.read<SettingScreenController>().onChangeTwiter('@' + text2);
-          },
-          decoration: const InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'TwiterID',
-          ),
+        child: Column(
+          children: [
+            Text(
+              'Twiter\n'
+                  + Twiter,
+              style: const TextStyle(
+                fontSize: 20,
+                color: Colors.lightBlueAccent,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            TextField(
+              keyboardType: TextInputType.emailAddress,
+              onChanged: (text2) {
+                context.read<SettingScreenController>().onChangeTwiter('@' + text2);
+              },
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'TwiterID',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () => context.read<SettingScreenController>().onTapTwiterTutorial(),
+              child: const Text('Twiterの登録方法'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.lightBlueAccent,
+              ),
+            ),
+          ],
         ),
-        ElevatedButton(
-            onPressed: () => context.read<SettingScreenController>().onTapTwiterTutorial(),
-            child: const Text('Twiterの登録方法'),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.lightBlueAccent,
-          ),
-        ),
-      ],
+      ),
     );
   }
 }
@@ -164,35 +188,45 @@ class InstagramKeyboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          'Instagram\n'
-              '' + Instagram,
-          style: const TextStyle(
-            fontSize: 20,
-            color: Colors.deepPurple,
-          ),
-          textAlign: TextAlign.center,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 30),
+      child: Container(
+        width: MediaQuery.of(context).size.width / 1.1 ,
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey),
+          borderRadius: BorderRadius.circular(10),
         ),
-        TextField(
-          keyboardType: TextInputType.emailAddress,
-          onChanged: (text3) {
-            context.read<SettingScreenController>().onChangeInstagram(text3);
-          },
-          decoration: const InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'InstagramID',
-          ),
+        child: Column(
+          children: [
+            Text(
+              'Instagram\n'
+                  '' + Instagram,
+              style: const TextStyle(
+                fontSize: 20,
+                color: Colors.deepPurple,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            TextField(
+              keyboardType: TextInputType.emailAddress,
+              onChanged: (text3) {
+                context.read<SettingScreenController>().onChangeInstagram(text3);
+              },
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'InstagramID',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () => context.read<SettingScreenController>().onTapInstagramTutorial(),
+              child: const Text('Instagramの登録方法'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.deepPurple,
+              ),
+            ),
+          ],
         ),
-        ElevatedButton(
-            onPressed: () => context.read<SettingScreenController>().onTapInstagramTutorial(),
-            child: const Text('Instagramの登録方法'),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.deepPurple,
-          ),
-        ),
-      ],
+      ),
     );
   }
 }
@@ -207,35 +241,46 @@ class FaceBookKeyboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          'Facebook\n'
-              + FaceBook,
-          style: const TextStyle(
-            fontSize: 20,
-            color: Colors.indigo,
-          ),
-          textAlign: TextAlign.center,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 30),
+      child: Container(
+        padding: const EdgeInsets.all(5.0),
+        width: MediaQuery.of(context).size.width / 1.1 ,
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey),
+          borderRadius: BorderRadius.circular(10),
         ),
-        TextField(
-          keyboardType: TextInputType.url,
-          onChanged: (text4) {
-            context.read<SettingScreenController>().onChangeFaceBook(text4);
-          },
-          decoration: const InputDecoration(
-            border: OutlineInputBorder(),
-            labelText: 'URL',
-          ),
+        child: Column(
+          children: [
+            Text(
+              'Facebook\n'
+                  + FaceBook,
+              style: const TextStyle(
+                fontSize: 20,
+                color: Colors.indigo,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            TextField(
+              keyboardType: TextInputType.url,
+              onChanged: (text4) {
+                context.read<SettingScreenController>().onChangeFaceBook(text4);
+              },
+              decoration: const InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'URL',
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () => context.read<SettingScreenController>().onTapFaceBookTutorial(),
+              child: const Text('Facebookの登録方法'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.indigo, //ボタンの背景色
+              ),
+            ),
+          ],
         ),
-        ElevatedButton(
-          onPressed: () => context.read<SettingScreenController>().onTapFaceBookTutorial(),
-          child: const Text('Facebookの登録方法'),
-          style: ElevatedButton.styleFrom(
-            primary: Colors.indigo, //ボタンの背景色
-          ),
-        ),
-      ],
+      ),
     );
   }
 }
