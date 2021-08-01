@@ -29,7 +29,6 @@ class _HomeState extends State<Home> {
         final Twiter = context.select<HomeScreenState, String>((state) => state.TwiterID);
         final Instagram = context.select<HomeScreenState, String>((state) => state.InstagramID);
         final Facebook = context.select<HomeScreenState, String>((state) => state.FaceBookID);
-       // WidgetsBinding.instance!.addPostFrameCallback((_) => context.read<HomeScreenController>().showTutorial());
         return GestureDetector(
           onTap: () => context.read<HomeScreenController>().initState(),
           child: Scaffold(
@@ -64,9 +63,7 @@ class _HomeState extends State<Home> {
             ),
             body: Column(
               children: [
-
                 Container(height: 50),
-
                 Expanded(
                   child: GridView.count(
                     crossAxisCount: 2,

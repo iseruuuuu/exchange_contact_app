@@ -33,7 +33,7 @@ class LineBarcodeItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             child: QrImage(
-              data: Line,
+              data: '' + Line,
               size: MediaQuery.of(context).size.width / 2.7,
             ),
           ),
