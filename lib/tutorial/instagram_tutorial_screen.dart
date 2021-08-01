@@ -38,7 +38,7 @@ class InstagramTutorialScreen extends StatelessWidget {
       child: const Padding(
         padding: EdgeInsets.only(bottom: 25.0),
         child: Text(
-          "さあ、始めましょう",
+          "さあ、登録してみよう!!",
           style: TextStyle(
             color: Colors.white,
             fontSize: 32,
