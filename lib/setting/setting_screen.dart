@@ -80,78 +80,28 @@ class LINEKeyboard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Text(
-            'LINE\n'
-                + Line,
-            style: const TextStyle(
-              fontSize: 18,
-              color: Colors.green,
-            ),
-            textAlign: TextAlign.center,
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: TextField(
-            keyboardType: TextInputType.url,
-            onChanged: (text) {
-              context.read<SettingScreenController>().onChangeLine(text);
-            },
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'URL',
-            ),
-          ),
-        ),
-        ElevatedButton(
-            onPressed: () => context.read<SettingScreenController>().onTapLineTutorial(),
-            child: const Text('LINEの登録方法')
-        ),
-      ],
-    );
-  }
-}
-
-class InstagramKeyboard extends StatelessWidget {
-  const InstagramKeyboard({
-    Key? key,
-    required this.Instagram,
-  }) : super(key: key);
-
-  final String Instagram;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
         Text(
-          'Instagram\n'
-              '' + Instagram,
+          'LINE\n'
+              + Line,
           style: const TextStyle(
-            fontSize: 18,
-            color: Colors.deepPurple,
+            fontSize: 20,
+            color: Colors.green,
           ),
           textAlign: TextAlign.center,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: TextField(
-            keyboardType: TextInputType.emailAddress,
-            onChanged: (text3) {
-              context.read<SettingScreenController>().onChangeInstagram(text3);
-            },
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'InstagramID',
-            ),
+        TextField(
+          keyboardType: TextInputType.url,
+          onChanged: (text) {
+            context.read<SettingScreenController>().onChangeLine(text);
+          },
+          decoration: const InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'URL',
           ),
         ),
         ElevatedButton(
-            onPressed: () => context.read<SettingScreenController>().onTapInstagramTutorial(),
-            child: Container(
-                child: const Text('Instagramの登録方法',))
+          onPressed: () => context.read<SettingScreenController>().onTapLineTutorial(),
+          child: const Text('LINEの登録方法'),
         ),
       ],
     );
@@ -179,22 +129,59 @@ class TwiterKeyboard extends StatelessWidget {
           ),
           textAlign: TextAlign.center,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: TextField(
-            keyboardType: TextInputType.emailAddress,
-            onChanged: (text2) {
-              context.read<SettingScreenController>().onChangeTwiter('@' + text2);
-            },
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'TwiterID',
-            ),
+        TextField(
+          keyboardType: TextInputType.emailAddress,
+          onChanged: (text2) {
+            context.read<SettingScreenController>().onChangeTwiter('@' + text2);
+          },
+          decoration: const InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'TwiterID',
           ),
         ),
         ElevatedButton(
             onPressed: () => context.read<SettingScreenController>().onTapTwiterTutorial(),
             child: const Text('Twiterの登録方法')
+        ),
+      ],
+    );
+  }
+}
+
+class InstagramKeyboard extends StatelessWidget {
+  const InstagramKeyboard({
+    Key? key,
+    required this.Instagram,
+  }) : super(key: key);
+
+  final String Instagram;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          'Instagram\n'
+              '' + Instagram,
+          style: const TextStyle(
+            fontSize: 18,
+            color: Colors.deepPurple,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        TextField(
+          keyboardType: TextInputType.emailAddress,
+          onChanged: (text3) {
+            context.read<SettingScreenController>().onChangeInstagram(text3);
+          },
+          decoration: const InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'InstagramID',
+          ),
+        ),
+        ElevatedButton(
+            onPressed: () => context.read<SettingScreenController>().onTapInstagramTutorial(),
+            child: const Text('Instagramの登録方法',)
         ),
       ],
     );
@@ -222,17 +209,14 @@ class FaceBookKeyboard extends StatelessWidget {
           ),
           textAlign: TextAlign.center,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: TextField(
-            keyboardType: TextInputType.url,
-            onChanged: (text4) {
-              context.read<SettingScreenController>().onChangeFaceBook(text4);
-            },
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'URL',
-            ),
+        TextField(
+          keyboardType: TextInputType.url,
+          onChanged: (text4) {
+            context.read<SettingScreenController>().onChangeFaceBook(text4);
+          },
+          decoration: const InputDecoration(
+            border: OutlineInputBorder(),
+            labelText: 'URL',
           ),
         ),
         ElevatedButton(
