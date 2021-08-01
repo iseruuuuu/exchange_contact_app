@@ -21,14 +21,14 @@ class TwiterTutorialScreen extends StatelessWidget {
     PageModel(
       color: const Color(0xFF95cedd),
       //TODO 後で作る。
-      imageAssetPath: 'assets/2.png',
+      imageAssetPath: 'assets/Twiter01.jpg',
       title: 'URLの取得方法①',
       body: 'Twiterの「Profile」を開いてください。',
       doAnimateImage: true,
     ),
     PageModel(
       color: Colors.blueAccent,
-      imageAssetPath: 'assets/1.png',
+      imageAssetPath: 'assets/Twiter02.jpg',
       title: 'URLの取得方法②',
       body: '@を除いたアドレスを記入してください。\n',
       doAnimateImage: true,
@@ -37,7 +37,7 @@ class TwiterTutorialScreen extends StatelessWidget {
       child: const Padding(
         padding: EdgeInsets.only(bottom: 25.0),
         child: Text(
-          "さあ、始めましょう",
+          "さあ、登録してみよう!!",
           style: TextStyle(
             color: Colors.white,
             fontSize: 32,
