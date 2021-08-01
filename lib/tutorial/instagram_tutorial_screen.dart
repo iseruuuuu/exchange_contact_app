@@ -21,7 +21,7 @@ class InstagramTutorialScreen extends StatelessWidget {
     PageModel(
       color: const Color(0xFF95cedd),
       //TODO 後で作る。
-      imageAssetPath: 'assets/2.png',
+      imageAssetPath: 'assets/Instagram01.PNG',
       title: 'URLの取得方法①',
       body: 'Instagramを開いて\n'
           'プロフィールを開いてください。',
@@ -29,7 +29,7 @@ class InstagramTutorialScreen extends StatelessWidget {
     ),
     PageModel(
       color: Colors.blueAccent,
-      imageAssetPath: 'assets/1.png',
+      imageAssetPath: 'assets/Instagram02.PNG',
       title: 'URLの取得方法②',
       body: 'ユーザーネームを入力してください',
       doAnimateImage: true,
