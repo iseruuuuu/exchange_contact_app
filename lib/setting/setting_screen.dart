@@ -102,6 +102,9 @@ class LINEKeyboard extends StatelessWidget {
         ElevatedButton(
           onPressed: () => context.read<SettingScreenController>().onTapLineTutorial(),
           child: const Text('LINEの登録方法'),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.green,
+          ),
         ),
       ],
     );
@@ -124,7 +127,7 @@ class TwiterKeyboard extends StatelessWidget {
           'Twiter\n'
               + Twiter,
           style: const TextStyle(
-            fontSize: 18,
+            fontSize: 20,
             color: Colors.lightBlueAccent,
           ),
           textAlign: TextAlign.center,
@@ -141,7 +144,10 @@ class TwiterKeyboard extends StatelessWidget {
         ),
         ElevatedButton(
             onPressed: () => context.read<SettingScreenController>().onTapTwiterTutorial(),
-            child: const Text('Twiterの登録方法')
+            child: const Text('Twiterの登録方法'),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.lightBlueAccent,
+          ),
         ),
       ],
     );
@@ -164,7 +170,7 @@ class InstagramKeyboard extends StatelessWidget {
           'Instagram\n'
               '' + Instagram,
           style: const TextStyle(
-            fontSize: 18,
+            fontSize: 20,
             color: Colors.deepPurple,
           ),
           textAlign: TextAlign.center,
@@ -181,7 +187,10 @@ class InstagramKeyboard extends StatelessWidget {
         ),
         ElevatedButton(
             onPressed: () => context.read<SettingScreenController>().onTapInstagramTutorial(),
-            child: const Text('Instagramの登録方法',)
+            child: const Text('Instagramの登録方法'),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.deepPurple,
+          ),
         ),
       ],
     );
@@ -204,8 +213,8 @@ class FaceBookKeyboard extends StatelessWidget {
           'Facebook\n'
               + FaceBook,
           style: const TextStyle(
-            fontSize: 18,
-            color: Colors.blue,
+            fontSize: 20,
+            color: Colors.indigo,
           ),
           textAlign: TextAlign.center,
         ),
@@ -220,8 +229,11 @@ class FaceBookKeyboard extends StatelessWidget {
           ),
         ),
         ElevatedButton(
-            onPressed: () => context.read<SettingScreenController>().onTapFaceBookTutorial(),
-            child: const Text('Facebookの登録方法')
+          onPressed: () => context.read<SettingScreenController>().onTapFaceBookTutorial(),
+          child: const Text('Facebookの登録方法'),
+          style: ElevatedButton.styleFrom(
+            primary: Colors.indigo, //ボタンの背景色
+          ),
         ),
       ],
     );
