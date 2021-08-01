@@ -68,49 +68,6 @@ class SettingScreen extends StatelessWidget {
   }
 }
 
-class FaceBookKeyboard extends StatelessWidget {
-  const FaceBookKeyboard({
-    Key? key,
-    required this.FaceBook,
-  }) : super(key: key);
-
-  final String FaceBook;
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          'Facebook\n'
-              + FaceBook,
-          style: const TextStyle(
-            fontSize: 18,
-            color: Colors.blue,
-          ),
-          textAlign: TextAlign.center,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 30),
-          child: TextField(
-            keyboardType: TextInputType.url,
-            onChanged: (text4) {
-              context.read<SettingScreenController>().onChangeFaceBook(text4);
-            },
-            decoration: const InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'URL',
-            ),
-          ),
-        ),
-        ElevatedButton(
-            onPressed: () => context.read<SettingScreenController>().onTapFaceBookTutorial(),
-            child: const Text('Facebookの登録方法')
-        ),
-      ],
-    );
-  }
-}
-
 class LINEKeyboard extends StatelessWidget {
   const LINEKeyboard({
     Key? key,
@@ -238,6 +195,49 @@ class TwiterKeyboard extends StatelessWidget {
         ElevatedButton(
             onPressed: () => context.read<SettingScreenController>().onTapTwiterTutorial(),
             child: const Text('Twiterの登録方法')
+        ),
+      ],
+    );
+  }
+}
+
+class FaceBookKeyboard extends StatelessWidget {
+  const FaceBookKeyboard({
+    Key? key,
+    required this.FaceBook,
+  }) : super(key: key);
+
+  final String FaceBook;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          'Facebook\n'
+              + FaceBook,
+          style: const TextStyle(
+            fontSize: 18,
+            color: Colors.blue,
+          ),
+          textAlign: TextAlign.center,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
+          child: TextField(
+            keyboardType: TextInputType.url,
+            onChanged: (text4) {
+              context.read<SettingScreenController>().onChangeFaceBook(text4);
+            },
+            decoration: const InputDecoration(
+              border: OutlineInputBorder(),
+              labelText: 'URL',
+            ),
+          ),
+        ),
+        ElevatedButton(
+            onPressed: () => context.read<SettingScreenController>().onTapFaceBookTutorial(),
+            child: const Text('Facebookの登録方法')
         ),
       ],
     );
