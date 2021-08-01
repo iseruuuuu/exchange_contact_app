@@ -42,7 +42,7 @@ class LineTutorialScreen extends StatelessWidget {
       //TODO もう少し大きくした方がいいかも！！
       imageAssetPath: 'assets/LINE03.jpg',
       title: 'URLの取得方法③',
-      body: '「他のアプリ」を押してください\n'
+      body: '「他のアプリ」を押してから\n'
           '「コピー」を押してください',
       doAnimateImage: true,
     ),
@@ -52,7 +52,7 @@ class LineTutorialScreen extends StatelessWidget {
       //TODO もう少し大きくした方がいいかも！！
       imageAssetPath: 'assets/LINE04.PNG',
       title: 'URLの取得方法④',
-      body: 'メモ帳などを開いてください。\n'
+      body: 'メモ帳などを開いて、\n'
           'URLを貼り付けてください。',
       doAnimateImage: true,
     ),
