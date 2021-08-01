@@ -21,22 +21,22 @@ class FacebookTutorialScreen extends StatelessWidget {
     PageModel(
       color: const Color(0xFF95cedd),
       //TODO 後で作る。
-      imageAssetPath: 'assets/2.png',
+      imageAssetPath: 'assets/Facebook01.PNG',
       title: 'URLの取得方法①',
-      body: 'メニューから「自分のプロフィールをみる\n'
+      body: '「自分のプロフィールをみる」\n'
           'を開いてください。',
       doAnimateImage: true,
     ),
     PageModel(
       color: Colors.blueAccent,
-      imageAssetPath: 'assets/1.png',
+      imageAssetPath: 'assets/Facebook02.PNG',
       title: 'URLの取得方法②',
       body: '「...」を押してください',
       doAnimateImage: true,
     ),
     PageModel(
       color: Colors.green,
-      imageAssetPath: 'assets/1.png',
+      imageAssetPath: 'assets/Facebook03.PNG',
       title: 'アカウントの変更方法',
       body: '「プロフィールのリンク」から\n'
           'リンクをコピーして貼り付けてください。',
