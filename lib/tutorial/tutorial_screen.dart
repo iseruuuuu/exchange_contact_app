@@ -24,14 +24,14 @@ class TutorialScreen extends StatelessWidget {
       color: const Color(0xFF95cedd),
       imageAssetPath: 'assets/2.png',
       title: '連絡先を交換可能！',
-      body: 'あらかじめアドレスを登録することで、\n'
-          '登録のためのQRコードを発行されます。',
+      body: 'アドレスを登録することで、\n'
+          'QRコードを発行されます。',
       doAnimateImage: true,
     ),
     PageModel(
       color: Colors.blueAccent,
       imageAssetPath: 'assets/3.png',
-      title: '自分の連絡先の渡し方',
+      title: '連絡先の渡し方',
       body: 'カメラを開いてもらってください。\n'
           'QRコードを読み込ませてください。',
       doAnimateImage: true,
@@ -39,7 +39,7 @@ class TutorialScreen extends StatelessWidget {
     PageModel(
       color: Colors.green,
       imageAssetPath: 'assets/4.png',
-      title: 'アカウントの変更方法',
+      title: '連絡先の変更方法',
       body: '設定画面にていつでも変更可能です。\n'
           '⚙︎を押して変更を行ってください。',
       doAnimateImage: true,
